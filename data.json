@@ -1,0 +1,102 @@
+{
+ "title": "Giá trị × Tính năng: tool vận hành Shopee/TikTok Shop VN (đọc 2026-11-06)",
+ "rubric_size": 15,
+ "groups": {
+  "vn": {
+   "label": "Nội địa POS/omni",
+   "color": "#2F7BD6"
+  },
+  "vnprofit": {
+   "label": "Nội địa báo cáo lãi",
+   "color": "#D6882F"
+  },
+  "sea": {
+   "label": "Khu vực SEA",
+   "color": "#6B5CE8"
+  },
+  "usprofit": {
+   "label": "Quốc tế, lãi TikTok",
+   "color": "#8A8F98"
+  }
+ },
+ "products": [
+  {
+   "name": "Sapo Pro",
+   "group": "vn",
+   "functionality": 7.0,
+   "effective_per_year": 114.92,
+   "basis": "249.000đ/tháng x12, VN, VAT không rõ, giả định kỳ tháng, 26.000đ/$"
+  },
+  {
+   "name": "Nhanh POS Basic+Ecom",
+   "group": "vn",
+   "functionality": 5.0,
+   "effective_per_year": 138.46,
+   "basis": "(250k+50k)đ/tháng x12, giá list, 26.000đ/$"
+  },
+  {
+   "name": "KiotViet Hỗ trợ",
+   "group": "vn",
+   "functionality": 3.5,
+   "effective_per_year": 124.62,
+   "basis": "270.000đ x12, kỳ tính không ghi rõ, giả định tháng"
+  },
+  {
+   "name": "Haravan Standard",
+   "group": "vn",
+   "functionality": 7.0,
+   "effective_per_year": 138.46,
+   "basis": "300.000đ/tháng x12, đã gồm VAT, trả theo năm"
+  },
+  {
+   "name": "MISA eShop Starter",
+   "group": "vn",
+   "functionality": 5.0,
+   "effective_per_year": 91.85,
+   "basis": "199.000đ/tháng x12 (PDF báo giá 04/2025)"
+  },
+  {
+   "name": "Renda PRO",
+   "group": "vnprofit",
+   "functionality": 7.0,
+   "effective_per_year": 276.92,
+   "basis": "600.000đ, kỳ tính không ghi, giả định tháng x12"
+  },
+  {
+   "name": "BigSeller vip1",
+   "group": "sea",
+   "functionality": 8.5,
+   "effective_per_year": 298.19,
+   "basis": "7.753.000đ/năm (giá gạch 8,4tr, giảm 7,7%), site VN"
+  },
+  {
+   "name": "Kixmon Startup",
+   "group": "usprofit",
+   "functionality": 5.0,
+   "effective_per_year": 190.0,
+   "basis": "$190/năm, chỉ TikTok Shop, không rõ tiền tệ"
+  }
+ ],
+ "candidates": [
+  {
+   "name": "MVP PRD @ $150/năm",
+   "functionality": 8.5,
+   "effective_per_year": 150.0
+  },
+  {
+   "name": "MVP PRD @ $300/năm",
+   "functionality": 8.5,
+   "effective_per_year": 300.0
+  },
+  {
+   "name": "MVP + GĐ2 thực tế @ $300/năm",
+   "functionality": 11.5,
+   "effective_per_year": 300.0
+  }
+ ],
+ "highlight_zone": {
+  "min_functionality": 9,
+  "min_value": 3,
+  "label": "Rộng ≥9/15 và ≥3 điểm/$100: trống"
+ }
+}

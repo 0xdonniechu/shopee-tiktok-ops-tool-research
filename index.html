@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Market research: tool vận hành đa sàn Shopee + TikTok Shop VN</title>
+<meta name="description" content="Research thị trường tool vận hành đa sàn Shopee và TikTok Shop Việt Nam: đối thủ, giá, nỗi đau seller, TAM/SAM/SOM, khả thi API. Đọc nguồn 2026-11-06.">
+<style>
+:root{--bg:#fff;--fg:#1c1a33;--mute:#5b5f6a;--line:#e4e5ea;--card:#f6f6fa;--acc:#b8476a;--code:#eef0f5;
+--c-vn:#2f7bd6;--c-vnprofit:#d6882f;--c-sea:#6b5ce8;--c-us:#8a8f98;--c-amb:#d9577e;--zone:rgba(237,112,143,.09)}
+@media(prefers-color-scheme:dark){:root{--bg:#14141c;--fg:#e8e8f0;--mute:#9aa0ad;--line:#2b2c38;--card:#1c1d28;--acc:#ef8aa8;--code:#23243a;
+--c-vn:#5b9bf0;--c-vnprofit:#f0a24f;--c-sea:#9a8cf5;--c-us:#a6abb5;--c-amb:#ef7a9c;--zone:rgba(237,112,143,.12)}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+header,main,footer{max-width:900px;margin:0 auto;padding:0 20px}
+header{padding-top:48px;padding-bottom:8px}
+h1.t{font-size:clamp(26px,5vw,38px);line-height:1.2;margin:0 0 12px}
+.sub{color:var(--mute);margin:0 0 6px}
+.warn{background:var(--card);border-left:3px solid var(--acc);padding:10px 14px;border-radius:6px;color:var(--mute);font-size:14px;margin:16px 0}
+h2{font-size:24px;margin:2.2em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:18px;margin:1.6em 0 .5em}
+p,li{overflow-wrap:anywhere}
+a{color:var(--acc)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.9em}
+pre{background:var(--code);padding:14px 16px;border-radius:8px;overflow:auto;font-size:13.5px;line-height:1.5}
+pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:560px}
+th,td{padding:8px 10px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:var(--card);font-weight:600;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+blockquote{margin:1em 0;padding:4px 14px;border-left:3px solid var(--line);color:var(--mute)}
+figure{margin:1.2em 0;padding:8px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+svg.chart{width:100%;height:auto;display:block}
+.chart .axis{fill:var(--fg)}.chart .tick,.chart .legend{fill:var(--mute)}.chart .lbl{fill:var(--fg)}
+.chart .grid{stroke:var(--line);fill:none}
+.chart .zone{fill:var(--zone)}.chart .zone-label{fill:var(--acc)}
+.chart .pt-vn{fill:var(--c-vn)}.chart .pt-vnprofit{fill:var(--c-vnprofit)}.chart .pt-sea{fill:var(--c-sea)}.chart .pt-usprofit{fill:var(--c-us)}
+.chart .amb{fill:none;stroke:var(--c-amb);stroke-width:2}.chart .amb-line{stroke:var(--c-amb);stroke-dasharray:3 3;opacity:.7}
+.chart .amb-lbl{fill:var(--c-amb);font-weight:600}
+.chart rect.legend{fill:var(--card);stroke:var(--line)}
+footer{padding-top:24px;padding-bottom:56px;color:var(--mute);font-size:13px;border-top:1px solid var(--line);margin-top:3em;max-width:860px}
+@media(max-width:600px){body{font-size:15px}h2{font-size:21px}}
+</style>
+</head>
+<body>
+<header>
+<h1 class="t">Market research: tool vận hành đa sàn Shopee + TikTok Shop VN</h1>
+<p class="sub">Ngày đọc nguồn: 2026-11-06 · Tỷ giá quy đổi: 1 USD = 26.000 VND (giả định)</p>
+<div class="warn">Bản research do AI agent tổng hợp từ nguồn công khai, chưa dùng thử sản phẩm nào. Mọi con số có nhãn độ tin; những chỗ chưa kiểm được ghi rõ trong bài. Hãy kiểm lại nguồn gốc trước khi dùng cho quyết định tài chính.</div>
+</header>
+<main>
+<p>Ngày đọc nguồn: 2026-11-06. Dựa trên PRD &quot;Tool vận hành Shopee và TikTok Shop&quot; v1.0 (05/11/2026, 16 trang).
+Nhãn: <code>confirmed</code> = đã mở trang gốc; <code>secondary</code> = báo/tổng hợp; <code>vendor</code> = hãng tự nói; <code>giả định</code> = của mình.
+Tỷ giá dùng để quy đổi: <strong>1 USD = 26.000 VND</strong> (giả định, sai số khoảng 1%).</p>
+<h2>Mục tiêu (Bước 0)</h2>
+<p>Tôi cần biết đối thủ, giá, nỗi đau seller và kích thước thị trường về tool vận hành đa sàn Shopee/TikTok Shop VN, để quyết định <strong>build hay không / giá bao nhiêu / vào bằng đường nào</strong>.</p>
+<h2>1. Kết luận (đọc phần này nếu chỉ có 2 phút)</h2>
+<ol>
+<li><strong>Không nên build nguyên PRD như một sản phẩm &quot;tất cả trong một&quot;.</strong> Phần vận hành thuần (đồng bộ đơn, tồn, in tem) đã có 9+ hãng, nhiều hãng có vốn lớn (KiotViet được KKR rót $45M, BigSeller $210M năm 2022). Đua ở đó là đua với đối thủ có nhiều tiền hơn.</li>
+<li><strong>Khoảng trống thật nằm ở một lát cắt hẹp: đối soát và lãi thật từng đơn cho cả Shopee lẫn TikTok, kèm quy trình duyệt và nhật ký thao tác.</strong> Không hãng nào trong 15 hãng đã chấm gộp đủ cả ba:<ul>
+<li>Renda có lãi thật, tiền về ví, cảnh báo, nhưng không có tầng vận hành (không thấy tồn kho, in tem).</li>
+<li>BigSeller có vận hành và lãi lỗ nhưng thiếu KOC theo lợi nhuận, ma trận duyệt và audit log.</li>
+<li>Kixmon có lãi sau ads và theo creator, nhưng chỉ TikTok Shop và không thấy tiếng Việt.</li>
+</ul>
+</li>
+<li><strong>Kích thước thị trường cho một sản phẩm thuê bao thuần là nhỏ.</strong> Chuỗi TAM/SAM/SOM bên dưới ra SAM nền ≈ $2,1M/năm và SOM 12 tháng nền ≈ $41 nghìn. Con số này phụ thuộc mạnh vào 3 giả định chưa có nguồn công khai (mục 7), nên đó là điều phải kiểm trước khi viết dòng code nào.</li>
+<li><strong>Rủi ro API lớn hơn PRD thừa nhận.</strong> TikTok Shop có Finance API chi tiết và GMV Max API hỗ trợ VN (qua cổng Business API riêng). Chat/CSKH bị chặn nếu chưa có ≥1.000 seller ủy quyền. Không thấy API đăng video. Shopee: không đọc được tài liệu gốc, và có một trường hợp công ty phần mềm VN bị từ chối ISV 3 lần (một người kể, không phải quy định).</li>
+<li><strong>Đề xuất vào bằng đường nào:</strong> MVP chỉ gồm module 04 (đối soát), lãi lỗ, theo dõi GMV Max, kèm phân quyền, duyệt, audit. Bán cho shop doanh số ≥100 triệu/tháng. Xác thực bằng bán trước và 5 cuộc phỏng vấn (mục 9).</li>
+</ol>
+<h2>2. Đối thủ và bảng giá thật</h2>
+<p>Giá VND, vùng VN, đọc 2026-11-06. Gói nhỏ nhất đủ nối Shopee + TikTok Shop.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Hãng</th>
+<th>Gói</th>
+<th>Giá</th>
+<th>Quy năm (USD)</th>
+<th>Ghi chú</th>
+<th>Nhãn</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Sapo</td>
+<td>Pro</td>
+<td>249.000đ/tháng</td>
+<td>≈ $115</td>
+<td>5 gian hàng sàn, 10.000 đơn/tháng. Trang không ghi kỳ tính và VAT. Phí cài đặt 1–3 triệu, miễn nếu ký ≥2 năm</td>
+<td>confirmed</td>
+</tr>
+<tr>
+<td>Nhanh.vn</td>
+<td>POS Basic + Nhanh.Ecom</td>
+<td>250.000 + 50.000đ/tháng</td>
+<td>≈ $138</td>
+<td>Giá list. Mua 2 năm: 150.000 + 50.000</td>
+<td>confirmed</td>
+</tr>
+<tr>
+<td>KiotViet</td>
+<td>Gói hỗ trợ</td>
+<td>270.000đ</td>
+<td>≈ $125</td>
+<td>Chỉ nối Shopee và TikTok Shop. Kỳ tính không ghi. Banner &quot;8.000đ/ngày&quot; không khớp (xem mục 8)</td>
+<td>confirmed</td>
+</tr>
+<tr>
+<td>Haravan</td>
+<td>Standard</td>
+<td>300.000đ/tháng</td>
+<td>≈ $138</td>
+<td>Đã gồm VAT, trả theo năm, 3 gian hàng sàn</td>
+<td>confirmed</td>
+</tr>
+<tr>
+<td>MISA eShop</td>
+<td>Starter</td>
+<td>199.000đ/tháng</td>
+<td>≈ $92</td>
+<td>Từ PDF báo giá 04/2025, trang web lệch ở gói cao hơn</td>
+<td>confirmed (PDF)</td>
+</tr>
+<tr>
+<td>Pancake POS</td>
+<td>Free</td>
+<td>0đ</td>
+<td>$0</td>
+<td>Miễn phí. Không có đối soát tiền về từ sàn</td>
+<td>confirmed</td>
+</tr>
+<tr>
+<td>Renda</td>
+<td>PRO</td>
+<td>600.000đ</td>
+<td>≈ $277 nếu là /tháng</td>
+<td>3 shop. <strong>Kỳ tính không ghi</strong>, giả định tháng. Gói Free: 1 shop, làm mới 1 lần/ngày</td>
+<td>confirmed (trang), kỳ = giả định</td>
+</tr>
+<tr>
+<td>BigSeller</td>
+<td>vip1</td>
+<td>7.753.000đ/năm</td>
+<td>≈ $298</td>
+<td>10.000 đơn, 12 shop, 5 user. Gói free: 1.500 đơn, 3 shop. Giá gạch 8,4 triệu, giảm thật 7,7%</td>
+<td>confirmed (API giá site VN)</td>
+</tr>
+<tr>
+<td>Ginee</td>
+<td>Pro</td>
+<td>Không công bố</td>
+<td>n/a</td>
+<td>Chỉ có hạn mức, giá phải liên hệ</td>
+<td>confirmed</td>
+</tr>
+<tr>
+<td>Kixmon</td>
+<td>Startup</td>
+<td>$190/năm</td>
+<td>$190</td>
+<td>Chỉ TikTok Shop, 500 đơn/tháng. Không ghi mã tiền tệ</td>
+<td>confirmed</td>
+</tr>
+</tbody></table></div>
+<p>Công cụ dữ liệu thị trường TikTok (mảng khác, bổ trợ chứ không cạnh tranh trực tiếp): FastMoss Basic 342.000đ/tháng (≈ $13), Kalodata Starter $21,9/tháng, EchoTik $13,9/tháng. Đều không phải công cụ vận hành shop.</p>
+<p><strong>Giá thật so với giá quảng cáo:</strong></p>
+<ul>
+<li>BigSeller: giá năm = 12 × tháng × 0,923 → giảm 7,7% (không phải mức &quot;giảm sâu&quot;). Giá 6 tháng = đúng 6 × giá tháng.</li>
+<li>Nhanh.vn: mua 2 năm giảm 26,7–40% tùy gói (tự tính từ giá list và giá 2 năm).</li>
+<li>Giá gia hạn: <strong>không hãng nào công bố.</strong> Chỉ Haravan ghi rõ VAT.</li>
+<li>Chưa đọc được giá: Salework, Abit, Pancake chat. Các trang render bằng JS hoặc không có bản VN.</li>
+</ul>
+<h3>Bộ tiêu chí 15 hạng mục và điểm</h3>
+<p>Hạng mục (lấy từ PRD): 1 đồng bộ đơn · 2 tồn kho trung tâm · 3 SLA/cảnh báo quá hạn · 4 in tem/quét/đóng gói · 5 đối soát tiền thực nhận · 6 lãi lỗ theo đơn/SKU · 7 ads + lãi sau ads · 8 KOC theo lợi nhuận · 9 listing/giá hàng loạt · 10 khuyến mãi có mô phỏng lãi · 11 CSKH chat gộp · 12 lịch nội dung/đăng video · 13 livestream · 14 phân quyền + duyệt + audit · 15 AI đề xuất kèm bằng chứng.</p>
+<p>Cách chấm: ✓ = 1, một phần = 0,5, &quot;không thấy&quot; = 0. <strong>&quot;Không thấy&quot; nghĩa là không có trên các trang đã đọc, không chắc hãng không có tính năng.</strong> Ô &quot;chưa kiểm được&quot; tính 0, nên điểm của Ginee là cận dưới.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Hãng</th>
+<th>Điểm /15</th>
+<th>Thấy mạnh</th>
+<th>Thiếu</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>BigSeller</td>
+<td>8,5</td>
+<td>Đơn, tồn, in tem, lãi lỗ, listing</td>
+<td>KOC, chat, livestream TikTok, ma trận duyệt, audit</td>
+</tr>
+<tr>
+<td>Sapo</td>
+<td>7,0</td>
+<td>Đơn, tồn, in tem</td>
+<td>SLA, KOC, khuyến mãi mô phỏng, lịch nội dung</td>
+</tr>
+<tr>
+<td>Haravan</td>
+<td>7,0</td>
+<td>Đơn, tồn, listing, chat</td>
+<td>SLA, KOC, khuyến mãi mô phỏng</td>
+</tr>
+<tr>
+<td>Renda</td>
+<td>7,0</td>
+<td>SLA, đối soát, lãi thật, ROAS theo lợi nhuận</td>
+<td>Tồn, in tem, listing, chat</td>
+</tr>
+<tr>
+<td>Pancake POS</td>
+<td>5,5</td>
+<td>Đơn, tồn</td>
+<td>SLA, KOC</td>
+</tr>
+<tr>
+<td>Ginee</td>
+<td>5,5 (cận dưới)</td>
+<td>Đơn, tồn, listing, chat</td>
+<td>Ads, lãi, KOC</td>
+</tr>
+<tr>
+<td>Nhanh.vn / MISA / Salework / Kixmon</td>
+<td>5,0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Shop Manager</td>
+<td>4,0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KiotViet</td>
+<td>3,5</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table></div>
+<p><strong>Ô trống toàn thị trường:</strong> khuyến mãi có mô phỏng lợi nhuận (10) và lịch nội dung/đăng video (12): không hãng nào. KOC theo lợi nhuận (8): chỉ Kixmon (gói Max, TikTok) và Renda (một phần). SLA (3): chỉ Renda rõ ràng.</p>
+<h3>Biểu đồ định vị</h3>
+<figure><svg class="chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 720" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img">
+<title>Giá trị × Tính năng: tool vận hành Shopee/TikTok Shop VN (đọc 2026-11-06)</title>
+<text x="90" y="34" font-size="20" font-weight="600" class="axis">Giá trị × Tính năng: tool vận hành Shopee/TikTok Shop VN (đọc 2026-11-06)</text>
+<text x="90" y="54" font-size="12" class="tick">X: categories covered of 15 (✓=1, partial=0.5) · Y: functionality points per $100 of effective yearly price (one-time ÷ 3 yrs)</text>
+<rect x="642.0" y="70.0" width="368.0" height="350.0" class="zone"/>
+<text x="1002.0" y="88.0" text-anchor="end" font-size="12" class="zone-label">Rộng ≥9/15 và ≥3 điểm/$100: trống</text>
+<line x1="90.0" y1="70" x2="90.0" y2="630" class="grid"/><text x="90.0" y="650" text-anchor="middle" font-size="12" class="tick">0</text>
+<line x1="274.0" y1="70" x2="274.0" y2="630" class="grid"/><text x="274.0" y="650" text-anchor="middle" font-size="12" class="tick">3</text>
+<line x1="458.0" y1="70" x2="458.0" y2="630" class="grid"/><text x="458.0" y="650" text-anchor="middle" font-size="12" class="tick">6</text>
+<line x1="642.0" y1="70" x2="642.0" y2="630" class="grid"/><text x="642.0" y="650" text-anchor="middle" font-size="12" class="tick">9</text>
+<line x1="826.0" y1="70" x2="826.0" y2="630" class="grid"/><text x="826.0" y="650" text-anchor="middle" font-size="12" class="tick">12</text>
+<line x1="1010.0" y1="70" x2="1010.0" y2="630" class="grid"/><text x="1010.0" y="650" text-anchor="middle" font-size="12" class="tick">15</text>
+<line x1="90" y1="630.0" x2="1010" y2="630.0" class="grid"/><text x="80" y="634.0" text-anchor="end" font-size="12" class="tick">0</text>
+<line x1="90" y1="560.0" x2="1010" y2="560.0" class="grid"/><text x="80" y="564.0" text-anchor="end" font-size="12" class="tick">1</text>
+<line x1="90" y1="490.0" x2="1010" y2="490.0" class="grid"/><text x="80" y="494.0" text-anchor="end" font-size="12" class="tick">2</text>
+<line x1="90" y1="420.0" x2="1010" y2="420.0" class="grid"/><text x="80" y="424.0" text-anchor="end" font-size="12" class="tick">3</text>
+<line x1="90" y1="350.0" x2="1010" y2="350.0" class="grid"/><text x="80" y="354.0" text-anchor="end" font-size="12" class="tick">4</text>
+<line x1="90" y1="280.0" x2="1010" y2="280.0" class="grid"/><text x="80" y="284.0" text-anchor="end" font-size="12" class="tick">5</text>
+<line x1="90" y1="210.0" x2="1010" y2="210.0" class="grid"/><text x="80" y="214.0" text-anchor="end" font-size="12" class="tick">6</text>
+<line x1="90" y1="140.0" x2="1010" y2="140.0" class="grid"/><text x="80" y="144.0" text-anchor="end" font-size="12" class="tick">7</text>
+<line x1="90" y1="70.0" x2="1010" y2="70.0" class="grid"/><text x="80" y="74.0" text-anchor="end" font-size="12" class="tick">8</text>
+<text x="550.0" y="680" text-anchor="middle" font-size="13" class="axis">Functionality →</text>
+<text transform="translate(28 350.0) rotate(-90)" text-anchor="middle" font-size="13" class="axis">Điểm tính năng / $100 mỗi năm →</text>
+<polyline points="611.3,233.3 611.3,431.7 795.3,361.7" fill="none" class="amb-line"/>
+<circle cx="519.3" cy="203.6" r="6" class="pt-vn"><title>Sapo Pro: functionality 7, $114.92/yr, value 6.1 (249.000đ/tháng x12, VN, VAT không rõ, giả định kỳ tháng, 26.000đ/$)</title></circle>
+<text x="529.3" y="207.6" text-anchor="start" font-size="11.5" class="lbl">Sapo Pro</text>
+<circle cx="396.7" cy="377.2" r="6" class="pt-vn"><title>Nhanh POS Basic+Ecom: functionality 5, $138.46/yr, value 3.6 ((250k+50k)đ/tháng x12, giá list, 26.000đ/$)</title></circle>
+<text x="406.7" y="381.2" text-anchor="start" font-size="11.5" class="lbl">Nhanh POS Basic+Ecom</text>
+<circle cx="304.7" cy="433.4" r="6" class="pt-vn"><title>KiotViet Hỗ trợ: functionality 3.5, $124.62/yr, value 2.8 (270.000đ x12, kỳ tính không ghi rõ, giả định tháng)</title></circle>
+<text x="314.7" y="425.4" text-anchor="start" font-size="11.5" class="lbl">KiotViet Hỗ trợ</text>
+<circle cx="519.3" cy="276.1" r="6" class="pt-vn"><title>Haravan Standard: functionality 7, $138.46/yr, value 5.1 (300.000đ/tháng x12, đã gồm VAT, trả theo năm)</title></circle>
+<text x="529.3" y="280.1" text-anchor="start" font-size="11.5" class="lbl">Haravan Standard</text>
+<circle cx="396.7" cy="248.9" r="6" class="pt-vn"><title>MISA eShop Starter: functionality 5, $91.85/yr, value 5.4 (199.000đ/tháng x12 (PDF báo giá 04/2025))</title></circle>
+<text x="406.7" y="252.9" text-anchor="start" font-size="11.5" class="lbl">MISA eShop Starter</text>
+<circle cx="519.3" cy="453.1" r="6" class="pt-vnprofit"><title>Renda PRO: functionality 7, $276.92/yr, value 2.5 (600.000đ, kỳ tính không ghi, giả định tháng x12)</title></circle>
+<text x="529.3" y="457.1" text-anchor="start" font-size="11.5" class="lbl">Renda PRO</text>
+<circle cx="611.3" cy="430.5" r="6" class="pt-sea"><title>BigSeller vip1: functionality 8.5, $298.19/yr, value 2.9 (7.753.000đ/năm (giá gạch 8,4tr, giảm 7,7%), site VN)</title></circle>
+<text x="621.3" y="434.5" text-anchor="start" font-size="11.5" class="lbl">BigSeller vip1</text>
+<circle cx="396.7" cy="445.8" r="6" class="pt-usprofit"><title>Kixmon Startup: functionality 5, $190.00/yr, value 2.6 ($190/năm, chỉ TikTok Shop, không rõ tiền tệ)</title></circle>
+<text x="406.7" y="449.8" text-anchor="start" font-size="11.5" class="lbl">Kixmon Startup</text>
+<path d="M611.3,225.3 L619.3,233.3 L611.3,241.3 L603.3,233.3 Z" stroke-width="2.5" class="amb"><title>MVP PRD @ $150/năm: functionality 8.5, $150.00/yr, value 5.7</title></path>
+<text x="621.3" y="237.3" text-anchor="start" font-size="11.5" font-weight="700" class="lbl amb-lbl">MVP PRD @ $150/năm</text>
+<path d="M611.3,423.7 L619.3,431.7 L611.3,439.7 L603.3,431.7 Z" stroke-width="2.5" class="amb"><title>MVP PRD @ $300/năm: functionality 8.5, $300.00/yr, value 2.8</title></path>
+<text x="601.3" y="435.7" text-anchor="end" font-size="11.5" font-weight="700" class="lbl amb-lbl">MVP PRD @ $300/năm</text>
+<path d="M795.3,353.7 L803.3,361.7 L795.3,369.7 L787.3,361.7 Z" stroke-width="2.5" class="amb"><title>MVP + GĐ2 thực tế @ $300/năm: functionality 11.5, $300.00/yr, value 3.8</title></path>
+<text x="805.3" y="365.7" text-anchor="start" font-size="11.5" font-weight="700" class="lbl amb-lbl">MVP + GĐ2 thực tế @ $300/năm</text>
+<rect x="98" y="78" width="250" height="100" rx="8" class="legend"/>
+<circle cx="110" cy="94" r="5" class="pt-vn"/><text x="122" y="98" font-size="11.5" class="lbl">Nội địa POS/omni</text>
+<circle cx="110" cy="112" r="5" class="pt-vnprofit"/><text x="122" y="116" font-size="11.5" class="lbl">Nội địa báo cáo lãi</text>
+<circle cx="110" cy="130" r="5" class="pt-sea"/><text x="122" y="134" font-size="11.5" class="lbl">Khu vực SEA</text>
+<circle cx="110" cy="148" r="5" class="pt-usprofit"/><text x="122" y="152" font-size="11.5" class="lbl">Quốc tế, lãi TikTok</text>
+<path d="M110,160 L116,166 L110,172 L104,166 Z" stroke-width="2" class="amb"/><text x="122" y="170" font-size="11.5" class="lbl amb-lbl">Your product, candidate prices</text>
+</svg></figure>
+<ul>
+<li>Trục X: số hạng mục phủ (/15). Trục Y: điểm tính năng trên mỗi $100/năm. (Đã đổi từ $10 sang $100 so với script gốc, vì giá VN cao hơn nên điểm dồn sát đáy.)</li>
+<li>Giá quy năm: gói nhỏ nhất, giá list vì không hãng nào công bố giá gia hạn, tỷ giá 26.000đ/$.</li>
+<li>Ô thoi hồng là <strong>giả thuyết</strong> cho sản phẩm của mình (điểm tính năng 8,5 là MVP theo PRD, 11,5 là sau giai đoạn 2 trừ các module không có API, xem mục 5).</li>
+<li>Vùng &quot;trống&quot; (≥9 hạng mục, ≥3 điểm/$100): chưa hãng nào đứng. Điểm MVP + giai đoạn 2 ở $300/năm lọt vào đó, <strong>nhưng đó là điều mình hứa chưa làm, không phải bằng chứng.</strong></li>
+<li>Bảng xếp hạng đầy đủ: <a href="ranking.md">ranking.md</a>. Dữ liệu đầu vào: <a href="data.json">data.json</a>.</li>
+</ul>
+<h2>3. Hồ sơ công ty (tiền chảy theo đường nào)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Hãng</th>
+<th>Thành lập</th>
+<th>Chủ sở hữu</th>
+<th>Vốn / thương vụ</th>
+<th>Quy mô tự công bố</th>
+<th>Nhãn</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Sapo</td>
+<td>2008 (trang công ty) hoặc 2009 (registry)</td>
+<td>Founder Trần Trọng Tuyến, VC thiểu số</td>
+<td>Series A &quot;7 chữ số USD&quot; 05/2020 (Smilegate, Teko). Tin đàm phán $20M 05/2023, chưa thấy đã đóng</td>
+<td>&gt;230.000 khách; nhân sự 1.000+ (Tracxn: 375)</td>
+<td>confirmed / vendor</td>
+</tr>
+<tr>
+<td>KiotViet</td>
+<td>2010 (pháp nhân), sản phẩm 2014</td>
+<td>Founder-led, KKR dẫn Series B</td>
+<td>$6M (08/2019) + $45M (09/2021) = $51M</td>
+<td>~300.000 khách (banner không ngày)</td>
+<td>confirmed / vendor</td>
+</tr>
+<tr>
+<td>Nhanh.vn</td>
+<td>2014 (pháp nhân 2019)</td>
+<td>Founder + MoMo (tỷ lệ không công bố)</td>
+<td>MoMo đầu tư 01/2022, giá trị không công bố</td>
+<td>&gt;80.000 doanh nghiệp (2022)</td>
+<td>confirmed</td>
+</tr>
+<tr>
+<td>Haravan</td>
+<td>2014</td>
+<td>Founder-led</td>
+<td>Chỉ thấy $50K accelerator (secondary)</td>
+<td>60.000+ khách</td>
+<td>vendor</td>
+</tr>
+<tr>
+<td>iPOS.vn</td>
+<td>2010</td>
+<td><strong>MoMo nắm 68,1%</strong> (05/2024)</td>
+<td>Không có vòng VC công khai</td>
+<td>100.000+ khách F&amp;B</td>
+<td>confirmed</td>
+</tr>
+<tr>
+<td>BigSeller</td>
+<td>2014</td>
+<td>Shenzhen Meiyunji, VC/growth</td>
+<td>C $100M (03/2022), D $110M (08/2022: SoftBank VF2, Sequoia China)</td>
+<td>Không có số VN riêng</td>
+<td>confirmed</td>
+</tr>
+<tr>
+<td>Ginee</td>
+<td>2021 (đổi tên)</td>
+<td><strong>Advance Intelligence Group</strong> (Singapore), không phải &quot;Ecosoft&quot;</td>
+<td>Tập đoàn: Series D &gt;$400M, định giá &gt;$2 tỷ (09/2021); $80M (05/2023)</td>
+<td>Merchant tập đoàn 100.000 (2021) → 75.000 (2023)</td>
+<td>confirmed</td>
+</tr>
+<tr>
+<td>Kalodata, FastMoss</td>
+<td></td>
+<td>Không xác định</td>
+<td>Không công bố</td>
+<td>Số người dùng không so sánh được</td>
+<td>UNVERIFIED</td>
+</tr>
+<tr>
+<td>Renda</td>
+<td></td>
+<td><strong>Chưa tra hồ sơ</strong></td>
+<td></td>
+<td></td>
+<td>chưa tra</td>
+</tr>
+</tbody></table></div>
+<p><strong>Một dòng:</strong> VC/PE dẫn đầu chỉ ở vài tên lớn (KiotViet, BigSeller, OnPoint), tập đoàn chiến lược mua kiểm soát (MoMo giữ 68,1% iPOS và một phần Nhanh.vn), phần còn lại tự thân; vòng lớn gần nhất đều từ 2022 trở về trước. MoMo đang cân nhắc bán tới 50% ở tầng mẹ (định giá tới $3 tỷ), chưa chốt.</p>
+<p>Giới hạn: không qua được cổng đăng ký kinh doanh quốc gia (captcha). Nguồn registry là bản gương chogia.vn/tratencongty.com (secondary). Không có dữ liệu registry Trung Quốc.</p>
+<h2>4. Seller đang khen/chê gì</h2>
+<p>Nguồn: gần 8.000 review 1–2★ trên App Store và Google Play (đọc thẳng từ endpoint store) cho Sapo, KiotViet, Nhanh, Haravan, BigSeller, Kalodata, cộng app Shopee Seller Center và TikTok Shop Seller Center làm đại diện nỗi đau seller. Số theo nhóm là regex tự đếm, quote thì đã đọc từng cái.</p>
+<p>Nhóm than phiền nhiều nhất (trên review của chính app sàn, 1–2★ từ 2024): phí cao ăn hết lãi (Shopee 18%, TikTok 6%), hoàn/trả hàng mất hàng mất tiền (10% và 9%), tiền về chậm và phí không minh bạch (khoảng 1–4%).</p>
+<p>Khoảng trống theo độ mạnh bằng chứng:</p>
+<ol>
+<li><strong>Giải thích từng đơn &quot;tại sao tiền về thấp hơn giá bán&quot;</strong> (affiliate, voucher shop tài trợ, ads, hoàn). Ví dụ: đơn 858k, phí 160k + trợ giá 50k + ads 50k + thuế 12k = 272k, tức 31,7% giá bán (mình tự tính). Độ tin: trung bình–cao.</li>
+<li><strong>Quản lý hoàn/trả hàng, khiếu nại có bằng chứng.</strong> Review Sapo: tính năng &quot;chờ nhận hàng hoàn&quot; không tự cập nhật khi hàng về kho. Review TikTok: nút hoàn tiền không có bước xác nhận, bấm nhầm mất quyền khiếu nại tiếp. Độ tin: trung bình–cao.</li>
+<li><strong>Lệch tồn khi sale:</strong> nhiều người than, nhưng nhiều đối thủ đã có, nên khó khác biệt.</li>
+<li><strong>Lãi thật sau GMV Max/KOC:</strong> <strong>review chưa chứng minh.</strong> Không review nào nhắc &quot;GMV Max&quot; hay &quot;KOC&quot;. Bằng chứng còn lại là blog của vendor. Độ tin: thấp.</li>
+<li><strong>Ma trận duyệt:</strong> chỉ vài review gián tiếp. Cần phỏng vấn.</li>
+</ol>
+<p><strong>Điều chưa biết:</strong> 0/790 review 1–2★ của Sapo, KiotViet, Nhanh, Haravan nhắc &quot;đối soát&quot;. Có thể tính năng ít người dùng, hoặc họ dùng web và không viết review app. Dữ liệu không tách được hai khả năng, nên <strong>không kết luận được &quot;chưa ai làm tốt đối soát&quot;</strong>.</p>
+<p><strong>Nguồn thiếu:</strong> Facebook group (nguồn quan trọng nhất cho than phiền seller VN), Reddit, G2, Capterra, Voz, Tinhte đều không đọc được. Hacker News không có tín hiệu về thị trường này.</p>
+<h2>5. Khả thi kỹ thuật và pháp lý (theo từng module PRD)</h2>
+<p>Tài liệu gốc của Shopee Open Platform và TikTok Partner Center đều là SPA, agent chỉ đọc được qua đoạn trích tìm kiếm. Mọi dòng dưới đây cần kiểm lại trên trang gốc trước khi cam kết.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Nhu cầu PRD</th>
+<th>TikTok Shop</th>
+<th>Shopee</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Đơn, tồn</td>
+<td>Có</td>
+<td>Có (suy từ SDK cộng đồng)</td>
+</tr>
+<tr>
+<td>Tài chính/đối soát</td>
+<td><strong>Có, rất chi tiết</strong> (statements, giao dịch theo đơn/SKU, payments)</td>
+<td>Có <code>get_escrow_detail</code> (nguồn SDK cộng đồng, chưa xác nhận VN)</td>
+</tr>
+<tr>
+<td>Quảng cáo / GMV Max</td>
+<td><strong>Có</strong>, GMV Max API v1.3 liệt kê VN, nhưng ở cổng TikTok API for Business (khác Partner Center). 1 shop chỉ ủy quyền 1 tài khoản quảng cáo</td>
+<td>ERP/ISV có Ads API hay không: hai nguồn mâu thuẫn</td>
+</tr>
+<tr>
+<td>Affiliate/KOC</td>
+<td>Có nhóm Affiliate Seller API, VN chưa xác nhận</td>
+<td>API affiliate riêng cho người làm affiliate, không phải cho ISV</td>
+</tr>
+<tr>
+<td>Chat/CSKH</td>
+<td><strong>Chặn:</strong> cần ≥1.000 seller ủy quyền hoặc 1 triệu lệnh gọi/ngày</td>
+<td>Chỉ whitelist (chưa xác nhận)</td>
+</tr>
+<tr>
+<td>Đăng video</td>
+<td><strong>Không tìm thấy API</strong></td>
+<td>Có <code>media_space</code> qua SDK cộng đồng, chưa xác nhận</td>
+</tr>
+<tr>
+<td>Livestream</td>
+<td>Chỉ analytics, không điều khiển</td>
+<td>Không tìm thấy</td>
+</tr>
+</tbody></table></div>
+<p>Hệ quả cho PRD:</p>
+<ul>
+<li>Module 07/08 (nội dung, đăng video) và 10 (chat CSKH) có thể không làm được bằng API chính thức. PRD cho phép &quot;giao việc đăng thủ công&quot;, nên đó là lối thoát.</li>
+<li><strong>PRD §4.2, §8.2, §8.3</strong> cho phép thao tác Seller Center bằng trình duyệt/user phụ khi chưa có API, trong khi §7.3 cấm &quot;khai thác API không chính thức&quot;. Hai ý này dễ mâu thuẫn trong thực tế. Cần đọc điều khoản Open Platform và Partner Center trước khi giữ phần này.</li>
+<li>ISV TikTok cần email khác email seller; compliance review từ 2 đến 3 tuần trở lên. Shopee: hồ sơ ISV duyệt ~3 ngày làm việc, <strong>pentest bắt buộc từ 13/07/2026</strong> (trang Singapore, chưa xác nhận cho VN). Trường hợp một công ty VN bị từ chối ISV 3 lần vì &quot;sản phẩm phải đang chạy, đã tích hợp sàn khác, có tài khoản trial&quot;: một người kể, không phải quy định. Có thể là rào chặn thật với người mới.</li>
+<li>Dữ liệu khách: Shopee giới hạn lưu dữ liệu cá nhân tối đa 90 ngày (secondary, từ Zetpy 2024). Module chăm sóc khách và xuất dữ liệu khách của PRD phải theo giới hạn này.</li>
+<li>Phí sàn đổi liên tục trong 2026 (Shopee 24/04, 01/05, 23/05, 01/06; TikTok 09/05, 03/07, 03/08): logic tính lãi phải cập nhật bảng phí liên tục. Đây là chi phí bảo trì, và cũng là lý do seller muốn tool.</li>
+</ul>
+<h2>6. Kích thước thị trường (số của hãng phân tích, mỗi con số một định nghĩa)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Nguồn</th>
+<th>Phân khúc</th>
+<th>Năm 2025</th>
+<th>Nhãn</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Metric</td>
+<td>Doanh số 4 sàn (Shopee, TikTok Shop, Lazada, Tiki)</td>
+<td>429,7 nghìn tỷ VND ≈ $16,4 tỷ; +34,75%</td>
+<td>confirmed</td>
+</tr>
+<tr>
+<td>YouNet ECI</td>
+<td>GMV 4 sàn</td>
+<td>458.160 tỷ VND</td>
+<td>secondary (tỷ lệ thị phần cộng ra 103,8%)</td>
+</tr>
+<tr>
+<td>Momentum Works</td>
+<td>GMV gồm cả đơn hủy/trả</td>
+<td>$20,4 tỷ</td>
+<td>confirmed (phụ lục press kit)</td>
+</tr>
+<tr>
+<td>e-Conomy SEA 2026</td>
+<td>TMĐT VN (2025 suy ra ≈ $26 tỷ, 2026: $32 tỷ)</td>
+<td>≈ $26 tỷ</td>
+<td>secondary</td>
+</tr>
+<tr>
+<td>Cục TMĐT, Bộ Công Thương</td>
+<td>Bán lẻ TMĐT toàn quốc</td>
+<td>≈ $31 tỷ</td>
+<td>confirmed</td>
+</tr>
+</tbody></table></div>
+<p>Thị phần 2025 (Metric): Shopee 56,04%, TikTok Shop 41,31%, Lazada + Tiki ≈ 2,65%. TikTok Shop vượt Shopee ở một số kỳ ngắn (Tết 2026: 51–52%). Metric cảnh báo đó là hiệu ứng ngắn hạn.</p>
+<p><strong>Số shop có đơn:</strong> 601.780 trên 4 sàn năm 2025, giảm 7,43% (so với ≈ 650.100 năm 2024, mình tự tính ngược). Shopee ≈ 209.000 và TikTok Shop &gt;266.000 nhà bán có doanh thu (YouNet, nửa đầu 2025, secondary, định nghĩa &quot;có doanh thu&quot; không rõ). Cộng lại không trừ trùng được.</p>
+<p><strong>Phân bố rất lệch (mình tự tính từ số Metric):</strong></p>
+<ul>
+<li>Doanh số TB mỗi shop có đơn: 429,7 nghìn tỷ ÷ 601.780 ≈ <strong>714 triệu/năm ≈ 59 triệu/tháng</strong>.</li>
+<li>Shop Mall (2,12% số shop, 32,6% doanh số): ≈ 12.800 shop × ≈ 10,7 tỷ/năm. Con số 12.800 là ước (tử số của 2,12% gồm cả Lazada/Tiki).</li>
+<li>Shop không-Mall: ≈ 479 triệu/năm ≈ <strong>40 triệu/tháng</strong> trung bình. Trung vị chắc chắn thấp hơn.</li>
+<li>Hệ quả: shop ≥100 triệu/tháng là thiểu số. Số lượng cụ thể <strong>không có nguồn công khai</strong>.</li>
+</ul>
+<p><strong>Phí sàn hiện hành VN (đọc qua đoạn trích tìm kiếm, kiểm lại trên Seller Center):</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>Shopee</th>
+<th>TikTok Shop</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Phí giao dịch</td>
+<td>6% (từ 01/05/2026)</td>
+<td>6% (từ 09/05/2026); giảm 1% nếu chi GMV Max ≥4% GMV</td>
+</tr>
+<tr>
+<td>Phí cố định/hoa hồng</td>
+<td>Theo ngành, bảng không đọc được</td>
+<td>14% Marketplace mặc định từ 03/07/2026; Mall 15,5% (trang seller-vn) hoặc 16% (báo chí), chưa chốt</td>
+</tr>
+<tr>
+<td>Tuỳ chọn</td>
+<td>Voucher Xtra 2%, Content Xtra 3%</td>
+<td>Voucher Xtra 5%, affiliate 10–20%</td>
+</tr>
+</tbody></table></div>
+<h2>7. TAM / SAM / SOM</h2>
+<p>Sản phẩm: SaaS thuê bao cho seller đa sàn Shopee + TikTok Shop VN, tập trung vào shop doanh số ≥100 triệu/tháng.</p>
+<pre><code>TAM = số shop đa sàn × giá/năm
+    = 570.000 shop có đơn trên Shopee+TikTok × 35% bán cả hai sàn = 199.500 shop
+      × 5.388.000đ/năm (Sapo Omni 449.000đ × 12)
+    = 1.075 tỷ VND ≈ $41,3M
+
+SAM = TAM × % đúng phân khúc
+    = 1.075 tỷ × (10% shop ≥100 triệu/tháng × 50% vẫn vận hành/đối soát thủ công)
+    = 1.075 tỷ × 5%  = 53,7 tỷ VND ≈ $2,07M   (≈ 9.975 shop)
+
+SOM (12 tháng) = SAM × 2%
+    = 53,7 tỷ × 2% = 1,07 tỷ VND ≈ $41,3 nghìn ARR  (≈ 199 shop trả tiền)
+</code></pre>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>Thấp</th>
+<th>Nền</th>
+<th>Cao</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Shop đa sàn</td>
+<td>112.500</td>
+<td>199.500</td>
+<td>270.000</td>
+</tr>
+<tr>
+<td>Giá/năm (VND)</td>
+<td>2.040.000 (Sapo StartUp)</td>
+<td>5.388.000</td>
+<td>11.988.000 (Sapo Growth)</td>
+</tr>
+<tr>
+<td>TAM</td>
+<td>229,5 tỷ ≈ $8,8M</td>
+<td>1.075 tỷ ≈ $41,3M</td>
+<td>3.237 tỷ ≈ $124,5M</td>
+</tr>
+<tr>
+<td>% đúng phân khúc</td>
+<td>1,5%</td>
+<td>5%</td>
+<td>10,5%</td>
+</tr>
+<tr>
+<td>SAM</td>
+<td>3,4 tỷ ≈ $0,13M</td>
+<td>53,7 tỷ ≈ $2,07M</td>
+<td>339,9 tỷ ≈ $13,1M</td>
+</tr>
+<tr>
+<td>% chiếm trong 12 tháng</td>
+<td>0,5%</td>
+<td>2%</td>
+<td>5%</td>
+</tr>
+<tr>
+<td>SOM</td>
+<td>≈ 17 triệu ≈ $0,7 nghìn</td>
+<td>1,07 tỷ ≈ $41,3 nghìn</td>
+<td>17,0 tỷ ≈ $654 nghìn</td>
+</tr>
+</tbody></table></div>
+<p><strong>Giả định phải cãi được (không có nguồn công khai):</strong></p>
+<ul>
+<li>35% shop bán cả hai sàn (thấp 25%, cao 45%): biến quyết định TAM.</li>
+<li>10% shop có doanh số ≥100 triệu/tháng (thấp 5%, cao 15%).</li>
+<li>50% trong nhóm đó đang làm thủ công (thấp 30%, cao 70%).</li>
+<li>2% chiếm trong 12 tháng: sanity check ≈ 199 shop với đội nhỏ.</li>
+<li>Có nguồn: 601.780 shop (Metric), giá Sapo (trang giá). 570.000 là giả định neo vào 475.000 (YouNet nửa đầu, không trừ trùng) và 601.780.</li>
+</ul>
+<p><strong>Cách tính khác: theo giá trị thu hồi</strong> (giả định r = 0,3% GMV thu hồi được từ đối soát, thấp 0,1%, cao 0,6%, <strong>chưa có nguồn nào công bố tỷ lệ này</strong>):</p>
+<ul>
+<li>GMV của shop ≥100 triệu/tháng ≈ 80% × 418,3 nghìn tỷ (Shopee + TikTok = 97,35% của 429,7 nghìn tỷ) = 334,6 nghìn tỷ VND.</li>
+<li>Thu hồi 0,3% = 1.004 tỷ VND/năm ≈ $38,6M. Lấy 20% phí = $7,7M/năm cho <strong>toàn bộ 57.000 shop ≥100 triệu/tháng</strong> (biến nền), không chỉ đa sàn.</li>
+<li>Ngưỡng hòa vốn (GMV hòa vốn = giá tool/tháng ÷ r): với tool 449.000đ/tháng, r = 0,3% thì shop cần GMV ≥150 triệu/tháng; r = 0,1% thì 450 triệu; r = 0,6% thì 75 triệu.</li>
+<li>Hàm ý: giá trị thu hồi chỉ vượt giá tool với shop khoảng ≥100 triệu/tháng. Shop không-Mall trung bình (40 triệu/tháng) không với tới.</li>
+</ul>
+<p><strong>Đọc kết quả:</strong> SAM $2–13M/năm là thị trường của một doanh nghiệp nhỏ–vừa, không phải của một venture. Hướng mở rộng: tăng giá/khách (lên theo giá trị thu hồi), thêm Mall/brand (12.800 shop, ACV giả định 30 triệu/năm → ≈ 384 tỷ ≈ $14,8M, chưa có nguồn cho ACV), hoặc thêm sàn. Mỗi hướng cần kiểm riêng.</p>
+<h2>8. Số bị từ chối in</h2>
+<ol>
+<li><strong>&quot;600.000 shop chia tay TMĐT 2025&quot;</strong> (tiêu đề Báo Pháp Luật): gốc Metric là 601.780 shop <em>còn có đơn</em>, giảm khoảng 48.000.</li>
+<li><strong>&quot;80.000 shop không có đơn nào H1/2025&quot;</strong> (The Investor): thân bài nói 80.000 shop <em>hoạt động ít hơn</em>.</li>
+<li><strong>KiotViet &quot;GMV $3 tỷ/tháng&quot;:</strong> tổng doanh số cửa hàng khách hàng, hãng tự nói, không phải doanh thu KiotViet. Banner &quot;8.000đ/ngày&quot; không khớp giá (270.000/30 = 9.000).</li>
+<li><strong>Nhanh.vn &quot;$200 triệu&quot;:</strong> là vòng huy động của MoMo, không phải giá trị đầu tư vào Nhanh.vn.</li>
+<li><strong>BigSeller &quot;1,1 triệu seller&quot;:</strong> số của 6 nước, không phải VN. Số khách của BigSeller (320k → 430k → 1,1 triệu → 3,9 triệu) và FastMoss (800k → 2M → 2,6M → 4,7M) không cùng định nghĩa.</li>
+<li><strong>&quot;TMĐT VN 39 tỷ USD 2025&quot;:</strong> hai thứ khác nhau: dự báo cũ 2022 và tổng kinh tế số của e-Conomy 2025 (TMĐT chỉ ≈ $25 tỷ). &quot;38,5 tỷ USD theo VECOM&quot;: không truy được.</li>
+<li><strong>Chênh lệch GMV 2025:</strong> Metric $16,4 tỷ, Momentum Works $20,4 tỷ, e-Conomy ≈ $26 tỷ, Cục TMĐT ≈ $31 tỷ. Không nguồn nào tự giải thích chênh lệch. Giữ nguyên, không chọn một số.</li>
+<li><strong>YouNet:</strong> thị phần cộng ra 103,8%.</li>
+<li><strong>Ecomobi &quot;GMV affiliate +105%, creator ×2,8, GMV/creator −11%&quot;:</strong> phép tính 2,05/2,8 ra giảm ≈ 27%, không phải 11%. Chỉ thấy qua đoạn trích.</li>
+<li><strong>&quot;Phí sàn 30–40%&quot;:</strong> chỉ là seller tự khai, không có sao kê.</li>
+<li><strong>&quot;Kalodata Starter $40, FastMoss Basic $60&quot;:</strong> đến từ bài so sánh của Tabcut (đối thủ). Giá gốc Kalodata Starter là $21,9 (VN), $55 (SEA) hoặc $59,9 (Global).</li>
+<li><strong>Giá &quot;$348/năm&quot; và &quot;$297/năm&quot; của Ginee</strong> (Shopify App Store, pickyourapp): không khớp nhau, không truy được về Ginee. ChannelEngine &quot;hỗ trợ TikTok Shop VN&quot;: trang gốc không nhắc VN.</li>
+<li><strong>Giá gạch Haravan:</strong> Standard và Omni Pro có giá gạch 1.000.000đ nằm trong thẻ bị ẩn. Chỉ mức giảm 20% của Omni Advanced hiển thị. Không dùng 70% hay 32%.</li>
+<li><strong>Định giá &quot;$200–300M&quot; của KiotViet:</strong> ước chừng của đại diện công ty, không rõ người nói.</li>
+<li><strong>Chênh lệch chưa giải được:</strong> hoa hồng Mall TikTok 15,5% hay 16%; giới hạn gói free BigSeller trên blog (1.500/3 shop và 3.000/5 shop); MISA Professional 399.000 hay 499.000đ; Sapo thành lập 2008 hay 2009; nhân sự Sapo 1.000+ hay 375.</li>
+</ol>
+<h2>9. Chỗ đã sửa của agent (checklist yêu cầu có ít nhất một)</h2>
+<ol>
+<li><strong>Agent 1b nói giá VND của Kalodata &quot;đắt hơn giá USD khoảng 20%&quot; cho cùng gói.</strong> Tính lại ở 26.000đ/$: Starter 549.000đ = $21,1 vs $21,9 (<strong>rẻ hơn 3,6%</strong>), Professional $53,8 vs $43,9 (đắt hơn 22,6%), Enterprise $328,8 vs $300 (đắt hơn 9,6%). Chỉ gói Professional khớp.</li>
+<li><strong>Giới hạn gói free của BigSeller:</strong> agent 1a và agent 3 thấy hai blog nói khác nhau (1.500 đơn/3 shop vs 3.000/5 shop). Giá đọc từ API của chính trang (agent 1b) ra 1.500 đơn, 3 shop, 2 user, nên mình dùng số này.</li>
+<li><strong>Agent 3 viết Sapo liệt kê đa sàn ở &quot;tất cả gói bán lẻ&quot;;</strong> agent 1a đọc kỹ hơn: Sapo StartUp chỉ có 1 kênh bán. Mình dùng Sapo Pro làm mốc.</li>
+<li><strong>Lỗi của mình trong brief:</strong> mình giao agent 4 tìm &quot;Ginee thuộc Ecosoft&quot;. Agent 4 kiểm ra là sai: Ginee thuộc Advance Intelligence Group.</li>
+<li><strong>Cách lấy giá của agent 1b:</strong> để thấy giá các nước khác của BigSeller, agent gửi header <code>X-Forwarded-For</code> giả. Không dùng làm nguồn chính; giá VN đọc từ IP Việt Nam.</li>
+</ol>
+<h2>10. Đề xuất</h2>
+<p><strong>Build hay không:</strong> có, nhưng như một sản phẩm hẹp, không phải toàn bộ PRD. Nếu mục tiêu là venture lớn thì thị trường này (SAM $2–13M) chưa đủ ở giá hiện tại; nếu là doanh nghiệp nhỏ–vừa hoặc công cụ cho chính mình thì hợp lý.</p>
+<p><strong>Vào bằng đường nào:</strong></p>
+<ol>
+<li><strong>MVP lát cắt:</strong> đối soát tiền thực nhận, lãi thật từng đơn (sau phí, ads, voucher, affiliate, hoàn), theo dõi GMV Max, phân quyền + duyệt + audit. Chạy trên Finance API của TikTok (đã xác nhận) và escrow API của Shopee (cần xác nhận). Bỏ khỏi MVP: kho, in tem, đăng video, chat, livestream.</li>
+<li><strong>Khách hàng:</strong> shop ≥100 triệu/tháng bán cả hai sàn. Mua thẳng bằng thông điệp &quot;tiền về thấp hơn giá bán vì sao&quot;.</li>
+<li><strong>Giá thử:</strong> 500.000–700.000đ/tháng (BigSeller vip1 ≈ 646.000đ/tháng nếu trả năm, Renda PRO 600.000đ). Không dưới Sapo Omni 449.000đ: thấp hơn là đua giá với POS rẻ và miễn phí (Pancake POS). Đây là giả thuyết để kiểm bằng bán trước, không phải kết luận.</li>
+</ol>
+<p><strong>Xác thực trước khi viết dòng code nào (rẻ nhất đến đắt nhất):</strong></p>
+<ol>
+<li><strong>Xin 3–5 sao kê đối soát thật</strong> của seller (đã ẩn thông tin) để đo r, tức tỷ lệ thất thoát thu hồi được. Đây là biến lớn nhất không có nguồn nào.</li>
+<li><strong>Phỏng vấn 5 seller ≥100 triệu/tháng:</strong> đang đối soát bằng gì, Excel hay tool nào, trả bao nhiêu, có muốn xem phí affiliate theo từng đơn không.</li>
+<li><strong>Hỏi trực tiếp Shopee VN và TikTok Shop VN</strong> về ISV: còn mở cho đơn vị mới không, điều kiện, thời gian, có Ads API và API tài chính cho ISV VN không. Đây là cổng chặn có thể làm hỏng cả kế hoạch.</li>
+<li><strong>Landing + waitlist, hoặc bán trước</strong> cho vài shop đã biết mình.</li>
+</ol>
+<h2>11. Giới hạn của bản research này</h2>
+<ul>
+<li>Không đọc được tài liệu gốc của Shopee Open Platform và TikTok Partner Center (SPA); mọi dòng API là đoạn trích tìm kiếm hoặc nguồn thứ cấp.</li>
+<li>Không có Facebook group, Reddit, G2, Capterra, Voz, Tinhte. Không có dữ liệu Metric/YouNet trả phí (số shop theo dải doanh thu, mức chồng lấn Shopee ∩ TikTok).</li>
+<li>Chưa dùng thử bất kỳ tool nào: mọi &quot;✓&quot; là từ trang hãng (vendor), chưa kiểm bằng sản phẩm thật.</li>
+<li>Renda (đối thủ gần PRD nhất): chưa có hồ sơ công ty, chưa mở demo, chưa biết số khách.</li>
+<li>&quot;Không thấy&quot; trong ma trận không đồng nghĩa với &quot;hãng không có&quot;.</li>
+<li>Kỳ tính giá của Sapo, KiotViet, Renda không được trang ghi rõ; mình giả định theo tháng.</li>
+<li>Số liệu thị trường 2026 (phí sàn, e-Conomy) mới trong vài tuần: kiểm lại trước khi trích.</li>
+</ul>
+
+</main>
+<footer>Dữ liệu biểu đồ: <a href="data.json">data.json</a> · Bảng xếp hạng: <a href="ranking.md">ranking.md</a> · Bản markdown: <a href="report.md">report.md</a>. Không phải lời khuyên đầu tư.</footer>
+</body>
+</html>
