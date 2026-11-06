@@ -6,9 +6,9 @@
 <title>Market research: tool vận hành đa sàn Shopee + TikTok Shop VN</title>
 <meta name="description" content="Research thị trường tool vận hành đa sàn Shopee và TikTok Shop Việt Nam: đối thủ, giá, nỗi đau seller, TAM/SAM/SOM, khả thi API. Đọc nguồn 2026-11-06.">
 <style>
-:root{--bg:#fff;--fg:#1c1a33;--mute:#5b5f6a;--line:#e4e5ea;--card:#f6f6fa;--acc:#b8476a;--code:#eef0f5;
+:root{--bg:#fff;--fg:#1c1a33;--mute:#5b5f6a;--line:#e4e5ea;--card:#f6f6fa;--acc:#b8476a;--code:#eef0f5;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5;
 --c-vn:#2f7bd6;--c-vnprofit:#d6882f;--c-sea:#6b5ce8;--c-us:#8a8f98;--c-amb:#d9577e;--zone:rgba(237,112,143,.09)}
-@media(prefers-color-scheme:dark){:root{--bg:#14141c;--fg:#e8e8f0;--mute:#9aa0ad;--line:#2b2c38;--card:#1c1d28;--acc:#ef8aa8;--code:#23243a;
+@media(prefers-color-scheme:dark){:root{--bg:#14141c;--fg:#e8e8f0;--mute:#9aa0ad;--line:#2b2c38;--card:#1c1d28;--acc:#ef8aa8;--code:#23243a;--col-odd:#1a1917;--col-even:#14141c;--th-odd:#24221f;--th-even:#1c2026;
 --c-vn:#5b9bf0;--c-vnprofit:#f0a24f;--c-sea:#9a8cf5;--c-us:#a6abb5;--c-amb:#ef7a9c;--zone:rgba(237,112,143,.12)}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
@@ -25,9 +25,14 @@ code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.9em}
 pre{background:var(--code);padding:14px 16px;border-radius:8px;overflow:auto;font-size:13.5px;line-height:1.5}
 pre code{background:none;padding:0}
 .tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px}
-table{border-collapse:collapse;width:100%;font-size:14px;min-width:560px}
-th,td{padding:8px 10px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
-th{background:var(--card);font-weight:600;white-space:nowrap}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.55}
+th,td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);border-right:1px solid var(--line);overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
 tr:last-child td{border-bottom:0}
 blockquote{margin:1em 0;padding:4px 14px;border-left:3px solid var(--line);color:var(--mute)}
 figure{margin:1.2em 0;padding:8px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
@@ -77,7 +82,7 @@ Không hãng nào trong 15 hãng đã chấm gộp đủ cả ba. Renda gần nh
 </ol>
 <h2>2. Đối thủ và bảng giá thật</h2>
 <p>Giá VND, vùng VN, đọc 2026-11-06. Gói nhỏ nhất đủ nối Shopee + TikTok Shop.</p>
-<div class="tw"><table>
+<div class="tw"><table style="table-layout:fixed;min-width:850px"><colgroup><col style="width:90px"><col style="width:135px"><col style="width:135px"><col style="width:135px"><col style="width:220px"><col style="width:135px"></colgroup>
 <thead>
 <tr>
 <th>Hãng</th>
@@ -180,7 +185,7 @@ Không hãng nào trong 15 hãng đã chấm gộp đủ cả ba. Renda gần nh
 <h3>Bộ tiêu chí 15 hạng mục và điểm</h3>
 <p>Hạng mục (lấy từ PRD): 1 đồng bộ đơn · 2 tồn kho trung tâm · 3 SLA/cảnh báo quá hạn · 4 in tem/quét/đóng gói · 5 đối soát tiền thực nhận · 6 lãi lỗ theo đơn/SKU · 7 ads + lãi sau ads · 8 KOC theo lợi nhuận · 9 listing/giá hàng loạt · 10 khuyến mãi có mô phỏng lãi · 11 CSKH chat gộp · 12 lịch nội dung/đăng video · 13 livestream · 14 phân quyền + duyệt + audit · 15 AI đề xuất kèm bằng chứng.</p>
 <p>Cách chấm: ✓ = 1, một phần = 0,5, &quot;không thấy&quot; = 0. <strong>&quot;Không thấy&quot; nghĩa là không có trên các trang đã đọc, không chắc hãng không có tính năng.</strong> Ô &quot;chưa kiểm được&quot; tính 0, nên điểm của Ginee là cận dưới.</p>
-<div class="tw"><table>
+<div class="tw"><table style="table-layout:fixed;min-width:533px"><colgroup><col style="width:135px"><col style="width:90px"><col style="width:143px"><col style="width:165px"></colgroup>
 <thead>
 <tr>
 <th>Hãng</th>
@@ -246,61 +251,7 @@ Không hãng nào trong 15 hãng đã chấm gộp đủ cả ba. Renda gần nh
 </tbody></table></div>
 <p><strong>Ô trống toàn thị trường:</strong> khuyến mãi có mô phỏng lợi nhuận (10) và lịch nội dung/đăng video (12): không hãng nào. KOC theo lợi nhuận (8): chỉ Kixmon (gói Max, TikTok) và Renda (một phần). SLA (3): chỉ Renda rõ ràng.</p>
 <h3>Biểu đồ định vị</h3>
-<figure><svg class="chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 720" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img">
-<title>Giá trị × Tính năng: tool vận hành Shopee/TikTok Shop VN (đọc 2026-11-06)</title>
-<text x="90" y="34" font-size="20" font-weight="600" class="axis">Giá trị × Tính năng: tool vận hành Shopee/TikTok Shop VN (đọc 2026-11-06)</text>
-<text x="90" y="54" font-size="12" class="tick">X: categories covered of 15 (✓=1, partial=0.5) · Y: functionality points per $100 of effective yearly price (one-time ÷ 3 yrs)</text>
-<rect x="642.0" y="70.0" width="368.0" height="350.0" class="zone"/>
-<text x="1002.0" y="88.0" text-anchor="end" font-size="12" class="zone-label">Rộng ≥9/15 và ≥3 điểm/$100: trống</text>
-<line x1="90.0" y1="70" x2="90.0" y2="630" class="grid"/><text x="90.0" y="650" text-anchor="middle" font-size="12" class="tick">0</text>
-<line x1="274.0" y1="70" x2="274.0" y2="630" class="grid"/><text x="274.0" y="650" text-anchor="middle" font-size="12" class="tick">3</text>
-<line x1="458.0" y1="70" x2="458.0" y2="630" class="grid"/><text x="458.0" y="650" text-anchor="middle" font-size="12" class="tick">6</text>
-<line x1="642.0" y1="70" x2="642.0" y2="630" class="grid"/><text x="642.0" y="650" text-anchor="middle" font-size="12" class="tick">9</text>
-<line x1="826.0" y1="70" x2="826.0" y2="630" class="grid"/><text x="826.0" y="650" text-anchor="middle" font-size="12" class="tick">12</text>
-<line x1="1010.0" y1="70" x2="1010.0" y2="630" class="grid"/><text x="1010.0" y="650" text-anchor="middle" font-size="12" class="tick">15</text>
-<line x1="90" y1="630.0" x2="1010" y2="630.0" class="grid"/><text x="80" y="634.0" text-anchor="end" font-size="12" class="tick">0</text>
-<line x1="90" y1="560.0" x2="1010" y2="560.0" class="grid"/><text x="80" y="564.0" text-anchor="end" font-size="12" class="tick">1</text>
-<line x1="90" y1="490.0" x2="1010" y2="490.0" class="grid"/><text x="80" y="494.0" text-anchor="end" font-size="12" class="tick">2</text>
-<line x1="90" y1="420.0" x2="1010" y2="420.0" class="grid"/><text x="80" y="424.0" text-anchor="end" font-size="12" class="tick">3</text>
-<line x1="90" y1="350.0" x2="1010" y2="350.0" class="grid"/><text x="80" y="354.0" text-anchor="end" font-size="12" class="tick">4</text>
-<line x1="90" y1="280.0" x2="1010" y2="280.0" class="grid"/><text x="80" y="284.0" text-anchor="end" font-size="12" class="tick">5</text>
-<line x1="90" y1="210.0" x2="1010" y2="210.0" class="grid"/><text x="80" y="214.0" text-anchor="end" font-size="12" class="tick">6</text>
-<line x1="90" y1="140.0" x2="1010" y2="140.0" class="grid"/><text x="80" y="144.0" text-anchor="end" font-size="12" class="tick">7</text>
-<line x1="90" y1="70.0" x2="1010" y2="70.0" class="grid"/><text x="80" y="74.0" text-anchor="end" font-size="12" class="tick">8</text>
-<text x="550.0" y="680" text-anchor="middle" font-size="13" class="axis">Functionality →</text>
-<text transform="translate(28 350.0) rotate(-90)" text-anchor="middle" font-size="13" class="axis">Điểm tính năng / $100 mỗi năm →</text>
-<polyline points="427.3,373.3 427.3,501.7 611.3,431.7 795.3,361.7" fill="none" class="amb-line"/>
-<circle cx="519.3" cy="203.6" r="6" class="pt-vn"><title>Sapo Pro: functionality 7, $114.92/yr, value 6.1 (249.000đ/tháng x12, VN, VAT không rõ, giả định kỳ tháng, 26.000đ/$)</title></circle>
-<text x="529.3" y="207.6" text-anchor="start" font-size="11.5" class="lbl">Sapo Pro</text>
-<circle cx="396.7" cy="377.2" r="6" class="pt-vn"><title>Nhanh POS Basic+Ecom: functionality 5, $138.46/yr, value 3.6 ((250k+50k)đ/tháng x12, giá list, 26.000đ/$)</title></circle>
-<text x="406.7" y="393.2" text-anchor="start" font-size="11.5" class="lbl">Nhanh POS Basic+Ecom</text>
-<circle cx="304.7" cy="433.4" r="6" class="pt-vn"><title>KiotViet Hỗ trợ: functionality 3.5, $124.62/yr, value 2.8 (270.000đ x12, kỳ tính không ghi rõ, giả định tháng)</title></circle>
-<text x="314.7" y="425.4" text-anchor="start" font-size="11.5" class="lbl">KiotViet Hỗ trợ</text>
-<circle cx="519.3" cy="276.1" r="6" class="pt-vn"><title>Haravan Standard: functionality 7, $138.46/yr, value 5.1 (300.000đ/tháng x12, đã gồm VAT, trả theo năm)</title></circle>
-<text x="529.3" y="280.1" text-anchor="start" font-size="11.5" class="lbl">Haravan Standard</text>
-<circle cx="396.7" cy="248.9" r="6" class="pt-vn"><title>MISA eShop Starter: functionality 5, $91.85/yr, value 5.4 (199.000đ/tháng x12 (PDF báo giá 04/2025))</title></circle>
-<text x="406.7" y="252.9" text-anchor="start" font-size="11.5" class="lbl">MISA eShop Starter</text>
-<circle cx="519.3" cy="453.1" r="6" class="pt-vnprofit"><title>Renda PRO: functionality 7, $276.92/yr, value 2.5 (600.000đ, kỳ tính không ghi, giả định tháng x12)</title></circle>
-<text x="529.3" y="457.1" text-anchor="start" font-size="11.5" class="lbl">Renda PRO</text>
-<circle cx="611.3" cy="430.5" r="6" class="pt-sea"><title>BigSeller vip1: functionality 8.5, $298.19/yr, value 2.9 (7.753.000đ/năm (giá gạch 8,4tr, giảm 7,7%), site VN)</title></circle>
-<text x="621.3" y="434.5" text-anchor="start" font-size="11.5" class="lbl">BigSeller vip1</text>
-<circle cx="396.7" cy="445.8" r="6" class="pt-usprofit"><title>Kixmon Startup: functionality 5, $190.00/yr, value 2.6 ($190/năm, chỉ TikTok Shop, không rõ tiền tệ)</title></circle>
-<text x="406.7" y="449.8" text-anchor="start" font-size="11.5" class="lbl">Kixmon Startup</text>
-<path d="M427.3,365.3 L435.3,373.3 L427.3,381.3 L419.3,373.3 Z" stroke-width="2.5" class="amb"><title>Lát cắt đối soát+lãi thật (5,5) @ $150/năm: functionality 5.5, $150.00/yr, value 3.7</title></path>
-<text x="437.3" y="377.3" text-anchor="start" font-size="11.5" font-weight="700" class="lbl amb-lbl">Lát cắt đối soát+lãi thật (5,5) @ $150/năm</text>
-<path d="M427.3,493.7 L435.3,501.7 L427.3,509.7 L419.3,501.7 Z" stroke-width="2.5" class="amb"><title>Lát cắt đối soát+lãi thật (5,5) @ $300/năm: functionality 5.5, $300.00/yr, value 1.8</title></path>
-<text x="437.3" y="505.7" text-anchor="start" font-size="11.5" font-weight="700" class="lbl amb-lbl">Lát cắt đối soát+lãi thật (5,5) @ $300/năm</text>
-<path d="M611.3,423.7 L619.3,431.7 L611.3,439.7 L603.3,431.7 Z" stroke-width="2.5" class="amb"><title>PRD MVP đủ (8,5) @ $300/năm: functionality 8.5, $300.00/yr, value 2.8</title></path>
-<text x="601.3" y="435.7" text-anchor="end" font-size="11.5" font-weight="700" class="lbl amb-lbl">PRD MVP đủ (8,5) @ $300/năm</text>
-<path d="M795.3,353.7 L803.3,361.7 L795.3,369.7 L787.3,361.7 Z" stroke-width="2.5" class="amb"><title>MVP + GĐ2 thực tế (11,5) @ $300/năm: functionality 11.5, $300.00/yr, value 3.8</title></path>
-<text x="785.3" y="353.7" text-anchor="end" font-size="11.5" font-weight="700" class="lbl amb-lbl">MVP + GĐ2 thực tế (11,5) @ $300/năm</text>
-<rect x="98" y="78" width="250" height="100" rx="8" class="legend"/>
-<circle cx="110" cy="94" r="5" class="pt-vn"/><text x="122" y="98" font-size="11.5" class="lbl">Nội địa POS/omni</text>
-<circle cx="110" cy="112" r="5" class="pt-vnprofit"/><text x="122" y="116" font-size="11.5" class="lbl">Nội địa báo cáo lãi</text>
-<circle cx="110" cy="130" r="5" class="pt-sea"/><text x="122" y="134" font-size="11.5" class="lbl">Khu vực SEA</text>
-<circle cx="110" cy="148" r="5" class="pt-usprofit"/><text x="122" y="152" font-size="11.5" class="lbl">Quốc tế, lãi TikTok</text>
-<path d="M110,160 L116,166 L110,172 L104,166 Z" stroke-width="2" class="amb"/><text x="122" y="170" font-size="11.5" class="lbl amb-lbl">Your product, candidate prices</text>
-</svg></figure>
+<figure><img src="chart.png" alt="Giá trị × Tính năng: tool vận hành Shopee/TikTok Shop VN (đọc 2026-11-06)" style="max-width:100%;height:auto;display:block;border-radius:8px;background:#fff"></figure>
 <ul>
 <li>Trục X: số hạng mục phủ (/15). Trục Y: điểm tính năng trên mỗi $100/năm. (Đã đổi từ $10 sang $100 so với script gốc, vì giá VN cao hơn nên điểm dồn sát đáy.)</li>
 <li>Giá quy năm: gói nhỏ nhất, giá list vì không hãng nào công bố giá gia hạn, tỷ giá 26.000đ/$.</li>
@@ -309,7 +260,7 @@ Không hãng nào trong 15 hãng đã chấm gộp đủ cả ba. Renda gần nh
 <li>Bảng xếp hạng đầy đủ: <a href="ranking.md">ranking.md</a>. Dữ liệu đầu vào: <a href="data.json">data.json</a>.</li>
 </ul>
 <h2>3. Hồ sơ công ty (tiền chảy theo đường nào)</h2>
-<div class="tw"><table>
+<div class="tw"><table style="table-layout:fixed;min-width:833px"><colgroup><col style="width:90px"><col style="width:135px"><col style="width:165px"><col style="width:188px"><col style="width:165px"><col style="width:90px"></colgroup>
 <thead>
 <tr>
 <th>Hãng</th>
@@ -416,7 +367,7 @@ Không hãng nào trong 15 hãng đã chấm gộp đủ cả ba. Renda gần nh
 </ul>
 <h3>Bổ sung 2026-11-06: đọc G2, Capterra, Trustpilot, Reddit, HN bằng <code>read-blocked</code></h3>
 <p>Đọc bằng <code>read.sh</code> (rung <code>brightdata(scraping browser)</code>) và <code>scroll-read.mjs</code>. Trang đã mở đều có URL và ngày trong dữ liệu thô; số dưới đây lấy từ trang gốc, không từ đoạn trích tìm kiếm.</p>
-<div class="tw"><table>
+<div class="tw"><table style="table-layout:fixed;min-width:554px"><colgroup><col style="width:90px"><col style="width:165px"><col style="width:135px"><col style="width:164px"></colgroup>
 <thead>
 <tr>
 <th>Hãng</th>
@@ -490,7 +441,7 @@ Không hãng nào trong 15 hãng đã chấm gộp đủ cả ba. Renda gần nh
 </ul>
 <h2>5. Khả thi kỹ thuật và pháp lý (theo từng module PRD)</h2>
 <p>Tài liệu gốc của Shopee Open Platform và TikTok Partner Center đều là SPA, agent chỉ đọc được qua đoạn trích tìm kiếm. Mọi dòng dưới đây cần kiểm lại trên trang gốc trước khi cam kết.</p>
-<div class="tw"><table>
+<div class="tw"><table style="table-layout:fixed;min-width:525px"><colgroup><col style="width:135px"><col style="width:205px"><col style="width:185px"></colgroup>
 <thead>
 <tr>
 <th>Nhu cầu PRD</th>
@@ -551,7 +502,7 @@ Không hãng nào trong 15 hãng đã chấm gộp đủ cả ba. Renda gần nh
 <li><strong>Sandbox TikTok:</strong> hai trang chính thức nêu ngưỡng khác nhau (100 và 1.000 yêu cầu/giờ). Chưa rõ cái nào đang áp dụng.</li>
 </ul>
 <h2>6. Kích thước thị trường (số của hãng phân tích, mỗi con số một định nghĩa)</h2>
-<div class="tw"><table>
+<div class="tw"><table style="table-layout:fixed;min-width:595px"><colgroup><col style="width:135px"><col style="width:165px"><col style="width:138px"><col style="width:157px"></colgroup>
 <thead>
 <tr>
 <th>Nguồn</th>
@@ -601,7 +552,7 @@ Không hãng nào trong 15 hãng đã chấm gộp đủ cả ba. Renda gần nh
 <li>Hệ quả: shop ≥100 triệu/tháng là thiểu số. Số lượng cụ thể <strong>không có nguồn công khai</strong>.</li>
 </ul>
 <p><strong>Phí sàn hiện hành VN (đọc qua đoạn trích tìm kiếm, kiểm lại trên Seller Center):</strong></p>
-<div class="tw"><table>
+<div class="tw"><table style="table-layout:fixed;min-width:530px"><colgroup><col style="width:135px"><col style="width:175px"><col style="width:220px"></colgroup>
 <thead>
 <tr>
 <th></th>
@@ -639,7 +590,7 @@ SAM = TAM × % đúng phân khúc
 SOM (12 tháng) = SAM × 2%
     = 53,7 tỷ × 2% = 1,07 tỷ VND ≈ $41,3 nghìn ARR  (≈ 199 shop trả tiền)
 </code></pre>
-<div class="tw"><table>
+<div class="tw"><table style="table-layout:fixed;min-width:540px"><colgroup><col style="width:135px"><col style="width:135px"><col style="width:135px"><col style="width:135px"></colgroup>
 <thead>
 <tr>
 <th></th>
@@ -716,7 +667,7 @@ SOM (12 tháng) = SAM × 2%
 <li>LLM $4 mỗi 1 triệu token (giá trộn, giả định; kiểm lại bảng giá model đang dùng).</li>
 <li>Thanh toán 3% doanh thu = $0,75. Hỗ trợ $1 / $2 / $5 mỗi tài khoản cho Light / Average / Power.</li>
 </ul>
-<div class="tw"><table>
+<div class="tw"><table style="table-layout:fixed;min-width:895px"><colgroup><col style="width:165px"><col style="width:125px"><col style="width:125px"><col style="width:90px"><col style="width:98px"><col style="width:90px"><col style="width:112px"><col style="width:90px"></colgroup>
 <thead>
 <tr>
 <th>Kịch bản</th>
@@ -799,7 +750,7 @@ SOM (12 tháng) = SAM × 2%
 <li><strong>Gói miễn phí làm wedge:</strong> BigSeller (1.500 đơn/tháng, 3 shop), Pancake POS, Renda Free (1 shop, làm mới 1 lần/ngày).</li>
 </ul>
 <p><strong>CAC payback (tự tính, giả định in rõ).</strong> Giá 650.000đ/tháng, <strong>biên gộp 60%</strong> (từ mục 8; agent 5 dùng 80%), thu tháng đầu ngay, churn tháng 3% / 5% / 8%, 26.000đ = $1. Công thức: n thỏa CAC = m·(1 − (1−c)ⁿ)/c, với m = giá × biên gộp.</p>
-<div class="tw"><table>
+<div class="tw"><table style="table-layout:fixed;min-width:773px"><colgroup><col style="width:186px"><col style="width:135px"><col style="width:135px"><col style="width:90px"><col style="width:90px"><col style="width:137px"></colgroup>
 <thead>
 <tr>
 <th>Kênh</th>
@@ -887,7 +838,7 @@ SOM (12 tháng) = SAM × 2%
 <li><strong>Hệ quả cho cách bán (suy luận của mình):</strong> mặc định gói năm (đối thủ đã làm: Kixmon &quot;2 tháng miễn phí&quot; khi trả năm); không trông vào gói tháng thuần; thêm tính năng khóa dữ liệu (gói xuất cho kế toán) và đo cohort thật trước khi tin &quot;đối soát thì dính&quot;.</li>
 </ul>
 <h2>11. Rủi ro phụ thuộc nền tảng (Upstream và Downstream)</h2>
-<div class="tw"><table>
+<div class="tw"><table style="table-layout:fixed;min-width:598px"><colgroup><col style="width:186px"><col style="width:175px"><col style="width:237px"></colgroup>
 <thead>
 <tr>
 <th>Rủi ro</th>
@@ -970,7 +921,7 @@ SOM (12 tháng) = SAM × 2%
 </ol>
 <p>Không đưa vào lõi: đồng bộ tồn, in tem, đăng video, chat. Đây là chỗ đã đông (mục 2) hoặc không có API (mục 5).</p>
 <p><strong>Mức phủ ba JTBD theo trang hãng (✓ rõ, ◐ một phần, ✗ không thấy; lời hãng, chưa dùng thử):</strong></p>
-<div class="tw"><table>
+<div class="tw"><table style="table-layout:fixed;min-width:610px"><colgroup><col style="width:135px"><col style="width:165px"><col style="width:175px"><col style="width:135px"></colgroup>
 <thead>
 <tr>
 <th>Hãng</th>

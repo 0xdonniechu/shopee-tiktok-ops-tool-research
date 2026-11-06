@@ -14,10 +14,11 @@ Tôi cần biết đối thủ, giá, nỗi đau seller và kích thước thị
 
 1. **Không nên build nguyên PRD như một sản phẩm "tất cả trong một".** Phần vận hành thuần (đồng bộ đơn, tồn, in tem) đã có 9+ hãng, nhiều hãng có vốn lớn (KiotViet được KKR rót $45M, BigSeller $210M năm 2022). Đua ở đó là đua với đối thủ có nhiều tiền hơn.
 2. **Khoảng trống hẹp hơn mình nghĩ lúc đầu.** Shopee VN đã có "Quản lý Kế toán" hiển thị doanh thu, giá vốn, phí và lợi nhuận từng đơn (bài 15/05/2024), nên phần "lãi theo đơn" riêng cho Shopee đang bị sàn tự làm. TikTok Shop US cũng đã có Earnings Analytics (05/2026); bản VN chưa xác nhận. Phần còn lại sàn khó làm vì bất lợi cạnh tranh giữa hai sàn:
-   - **một sổ lãi thật cho cả Shopee và TikTok**, có quảng cáo (GMV Max, Shopee Ads) quy về lãi theo SKU;
-   - **giải thích từng đơn "vì sao tiền về thấp hơn giá bán"** và đối soát có hồ sơ khiếu nại kèm bằng chứng;
-   - **duyệt và audit log** cho các thao tác ảnh hưởng tiền.
+    - **một sổ lãi thật cho cả Shopee và TikTok**, có quảng cáo (GMV Max, Shopee Ads) quy về lãi theo SKU;
+    - **giải thích từng đơn "vì sao tiền về thấp hơn giá bán"** và đối soát có hồ sơ khiếu nại kèm bằng chứng;
+    - **duyệt và audit log** cho các thao tác ảnh hưởng tiền.
    Không hãng nào trong 15 hãng đã chấm gộp đủ cả ba. Renda gần nhất nhưng không có tầng vận hành; BigSeller thiếu KOC theo lợi nhuận, duyệt và audit; Kixmon chỉ TikTok Shop và không thấy tiếng Việt.
+
 3. **Thị trường cho thuê bao thuần là nhỏ.** TAM/SAM/SOM (mục 7) ra SAM nền ≈ $2,1M/năm (khoảng $0,13–13M) và SOM 12 tháng nền ≈ $41 nghìn. Con số phụ thuộc mạnh vào 3 giả định chưa có nguồn công khai.
 4. **Rủi ro API và đường vào ISV lớn hơn PRD thừa nhận (mục 5, 11).** TikTok có Finance API chi tiết và GMV Max API hỗ trợ VN, nhưng đổi API hàng chục lần mỗi tháng, chat bị chặn nếu chưa có ≥1.000 seller, và thông tin người mua bị che theo App Category từ 12/10/2026. Shopee bắt ISV nộp pentest từ 13/07/2026 (hạn 16/10/2026 đã qua; nguồn là trang Singapore, chưa xác nhận cho VN), và tiêu chí nhận ISV đòi sản phẩm đã chạy và đã tích hợp sàn khác.
 5. **Độ giữ chân: đối soát và lãi thật là "hệ thống ghi nhận định kỳ", chưa chứng minh dùng hàng ngày (mục 10).** Ví dụ xác minh duy nhất về công cụ lợi nhuận TikTok Shop có doanh thu giảm khoảng 7% mỗi tháng trong 10 tháng. Nên bán gói năm, không bán thuần theo tháng.
@@ -45,6 +46,7 @@ Giá VND, vùng VN, đọc 2026-11-06. Gói nhỏ nhất đủ nối Shopee + Ti
 Công cụ dữ liệu thị trường TikTok (mảng khác, bổ trợ chứ không cạnh tranh trực tiếp): FastMoss Basic 342.000đ/tháng (≈ $13), Kalodata Starter $21,9/tháng, EchoTik $13,9/tháng. Đều không phải công cụ vận hành shop.
 
 **Giá thật so với giá quảng cáo:**
+
 - BigSeller: giá năm = 12 × tháng × 0,923 → giảm 7,7% (không phải mức "giảm sâu"). Giá 6 tháng = đúng 6 × giá tháng.
 - Nhanh.vn: mua 2 năm giảm 26,7–40% tùy gói (tự tính từ giá list và giá 2 năm).
 - Giá gia hạn: **không hãng nào công bố.** Chỉ Haravan ghi rõ VAT.
@@ -105,6 +107,7 @@ Nguồn: gần 8.000 review 1–2★ trên App Store và Google Play (đọc th�
 Nhóm than phiền nhiều nhất (trên review của chính app sàn, 1–2★ từ 2024): phí cao ăn hết lãi (Shopee 18%, TikTok 6%), hoàn/trả hàng mất hàng mất tiền (10% và 9%), tiền về chậm và phí không minh bạch (khoảng 1–4%).
 
 Khoảng trống theo độ mạnh bằng chứng:
+
 1. **Giải thích từng đơn "tại sao tiền về thấp hơn giá bán"** (affiliate, voucher shop tài trợ, ads, hoàn). Ví dụ: đơn 858k, phí 160k + trợ giá 50k + ads 50k + thuế 12k = 272k, tức 31,7% giá bán (mình tự tính). Độ tin: trung bình–cao.
 2. **Quản lý hoàn/trả hàng, khiếu nại có bằng chứng.** Review Sapo: tính năng "chờ nhận hàng hoàn" không tự cập nhật khi hàng về kho. Review TikTok: nút hoàn tiền không có bước xác nhận, bấm nhầm mất quyền khiếu nại tiếp. Độ tin: trung bình–cao.
 3. **Lệch tồn khi sale:** nhiều người than, nhưng nhiều đối thủ đã có, nên khó khác biệt.
@@ -114,6 +117,7 @@ Khoảng trống theo độ mạnh bằng chứng:
 **Điều chưa biết:** 0/790 review 1–2★ của Sapo, KiotViet, Nhanh, Haravan nhắc "đối soát". Có thể tính năng ít người dùng, hoặc họ dùng web và không viết review app. Dữ liệu không tách được hai khả năng, nên **không kết luận được "chưa ai làm tốt đối soát"**.
 
 **Nguồn thiếu và phần đã bổ sung (cập nhật 2026-11-06):**
+
 - **Reddit:** thử qua proxy ở hai IP thoát khác nhau (Malaysia, Canada), cả hai đều gặp trang CAPTCHA "Prove your humanity", không đọc được. Kho lưu trữ chỉ trả được bài không liên quan (về Shopify). Bài này không dùng số liệu Reddit nào.
 - **G2 và Capterra:** đã đọc được G2 (qua trình duyệt từ xa). Ginee có trang với 5/5 từ 3 review, hồ sơ chưa được claim. Tìm kiếm không ra trang riêng của BigSeller trên G2 hay Capterra (kết quả "BE BIG SELLER" là một công ty khác). Hai nguồn này gần như trống cho thị trường này, nên không bổ sung được nỗi đau seller.
 - **Facebook group** (nguồn quan trọng nhất cho than phiền seller VN, cần đăng nhập), **Voz, Tinhte:** vẫn chưa đọc.
@@ -157,6 +161,7 @@ Tài liệu gốc của Shopee Open Platform và TikTok Partner Center đều l�
 | Livestream | Chỉ analytics, không điều khiển | Không tìm thấy |
 
 Hệ quả cho PRD:
+
 - Module 07/08 (nội dung, đăng video) và 10 (chat CSKH) có thể không làm được bằng API chính thức. PRD cho phép "giao việc đăng thủ công", nên đó là lối thoát.
 - **PRD §4.2, §8.2, §8.3** cho phép thao tác Seller Center bằng trình duyệt/user phụ khi chưa có API, trong khi §7.3 cấm "khai thác API không chính thức". Hai ý này dễ mâu thuẫn trong thực tế. Cần đọc điều khoản Open Platform và Partner Center trước khi giữ phần này.
 - ISV TikTok cần email khác email seller; compliance review từ 2 đến 3 tuần trở lên. Shopee: hồ sơ ISV duyệt ~3 ngày làm việc, **pentest bắt buộc từ 13/07/2026** (trang Singapore, chưa xác nhận cho VN). Trường hợp một công ty VN bị từ chối ISV 3 lần vì "sản phẩm phải đang chạy, đã tích hợp sàn khác, có tài khoản trial": một người kể, không phải quy định. Có thể là rào chặn thật với người mới.
@@ -186,6 +191,7 @@ Thị phần 2025 (Metric): Shopee 56,04%, TikTok Shop 41,31%, Lazada + Tiki ≈
 **Số shop có đơn:** 601.780 trên 4 sàn năm 2025, giảm 7,43% (so với ≈ 650.100 năm 2024, mình tự tính ngược). Shopee ≈ 209.000 và TikTok Shop >266.000 nhà bán có doanh thu (YouNet, nửa đầu 2025, secondary, định nghĩa "có doanh thu" không rõ). Cộng lại không trừ trùng được.
 
 **Phân bố rất lệch (mình tự tính từ số Metric):**
+
 - Doanh số TB mỗi shop có đơn: 429,7 nghìn tỷ ÷ 601.780 ≈ **714 triệu/năm ≈ 59 triệu/tháng**.
 - Shop Mall (2,12% số shop, 32,6% doanh số): ≈ 12.800 shop × ≈ 10,7 tỷ/năm. Con số 12.800 là ước (tử số của 2,12% gồm cả Lazada/Tiki).
 - Shop không-Mall: ≈ 479 triệu/năm ≈ **40 triệu/tháng** trung bình. Trung vị chắc chắn thấp hơn.
@@ -228,6 +234,7 @@ SOM (12 tháng) = SAM × 2%
 | SOM | ≈ 17 triệu ≈ $0,7 nghìn | 1,07 tỷ ≈ $41,3 nghìn | 17,0 tỷ ≈ $654 nghìn |
 
 **Giả định phải cãi được (không có nguồn công khai):**
+
 - 35% shop bán cả hai sàn (thấp 25%, cao 45%): biến quyết định TAM.
 - 10% shop có doanh số ≥100 triệu/tháng (thấp 5%, cao 15%).
 - 50% trong nhóm đó đang làm thủ công (thấp 30%, cao 70%).
@@ -235,6 +242,7 @@ SOM (12 tháng) = SAM × 2%
 - Có nguồn: 601.780 shop (Metric), giá Sapo (trang giá). 570.000 là giả định neo vào 475.000 (YouNet nửa đầu, không trừ trùng) và 601.780.
 
 **Cách tính khác: theo giá trị thu hồi** (giả định r = 0,3% GMV thu hồi được từ đối soát, thấp 0,1%, cao 0,6%, **chưa có nguồn nào công bố tỷ lệ này**):
+
 - GMV của shop ≥100 triệu/tháng ≈ 80% × 418,3 nghìn tỷ (Shopee + TikTok = 97,35% của 429,7 nghìn tỷ) = 334,6 nghìn tỷ VND.
 - Thu hồi 0,3% = 1.004 tỷ VND/năm ≈ $38,6M. Lấy 20% phí = $7,7M/năm cho **toàn bộ 57.000 shop ≥100 triệu/tháng** (biến nền), không chỉ đa sàn.
 - Ngưỡng hòa vốn (GMV hòa vốn = giá tool/tháng ÷ r): với tool 449.000đ/tháng, r = 0,3% thì shop cần GMV ≥150 triệu/tháng; r = 0,1% thì 450 triệu; r = 0,6% thì 75 triệu.
@@ -247,6 +255,7 @@ SOM (12 tháng) = SAM × 2%
 Phạm vi: lát cắt đề xuất (đồng bộ, đối soát, lãi thật, cảnh báo) không tạo ảnh hay video; chỉ phần "AI giải thích chênh lệch và đề xuất" tính theo lượt dùng. **Hệ số tạo hỏng (reroll) và "chi phí trên mỗi kết quả dùng được" chỉ áp dụng cho giai đoạn 3 (tạo ảnh/video), chưa có số đo nào nên không tính ở đây.**
 
 **Giả định (tất cả là giả định của mình, không có nguồn; phải đo trên bản chạy thử):**
+
 - Giá $25/tháng (≈ 650.000đ, $300/năm), quota 10.000 đơn/tháng, 12 shop (cùng cỡ BigSeller vip1).
 - Hạ tầng theo đơn $0,0005/đơn (≈ 13đ); theo kết nối shop $0,30/shop/tháng.
 - LLM $4 mỗi 1 triệu token (giá trộn, giả định; kiểm lại bảng giá model đang dùng).
@@ -271,6 +280,7 @@ Số đơn, số shop và token cho từng kịch bản: Light 2.000 đơn, 4 sh
 ## 9. Kênh phân phối gốc và CAC so với LTV
 
 **Đối thủ lấy khách từ đâu (đọc 2026-11-06):**
+
 - **SEO/blog:** Sapo 3.654 URL blog (109 có "tiktok", 111 có "shopee"); BigSeller 4.789 URL nhiều ngôn ngữ, ít nhất 113 slug tiếng Việt khớp từ khoá, trong đó ≥12 bài cùng cụm "phần mềm quản lý bán hàng đa kênh Shopee TikTok"; Nhanh.vn 2.400 URL; Ginee VN 999 URL; Haravan 356 URL. Mình đếm từ sitemap; số của BigSeller là cận dưới vì chưa tách theo ngôn ngữ, và ngày `lastmod` của Sapo bị làm mới hàng loạt nên không suy ra tần suất đăng.
 - **Quảng cáo trả tiền (Meta Ad Library VN, mẫu 50–59 quảng cáo mỗi truy vấn, "không thấy" không có nghĩa là không chạy):** BigSeller đang chạy ít nhất 4 mẫu với wedge là "Miễn phí vĩnh viễn", sao chép sản phẩm đối thủ và đăng hàng loạt, không phải lãi lỗ hay đối soát. Sapo có một quảng cáo máy bán hàng cầm tay. Google Ads không đọc được (CAPTCHA).
 - **Đội sales:** KiotViet tuyển sales với lương cứng đến 12 triệu và hoa hồng đến 40% doanh thu tháng (tin tuyển dụng). Số "~1.200 sales" từ Forbes VN 03/2023 không còn nguồn 2026; KiotViet tự nói hơn 1.700 nhân sự (05/2026) mà không nêu số sales.
@@ -334,6 +344,7 @@ CAC của affiliate là thưởng một lần; CAC sales-led và content là gi�
 Trục X của biểu đồ đếm số tính năng, nên dễ tạo ảo giác rằng "siêu chợ tất cả trong một" luôn thắng. Lát cắt đề xuất chỉ được 5,5/15 và nằm thấp hơn BigSeller (8,5) trên biểu đồ. Điều đó là cố ý: tiêu chí cần chấm là mức xuống tiền cho một bài toán tạo ra tiền trực tiếp, không phải số ô được tích.
 
 **Ba công việc cốt lõi (JTBD) mình đề xuất, kèm bằng chứng:**
+
 1. **Biết tiền thật của từng đơn/SKU sau mọi khoản trừ, trên cả hai sàn, có quảng cáo.** Bằng chứng: review seller không hiểu vì sao tiền về thấp hơn giá bán (mục 4); ba thread Reddit hướng Mỹ hỏi đúng bài toán này; review SiteGiant về báo cáo lãi gộp. Khoảng trống còn lại sau khi trừ công cụ gốc của Shopee: đa sàn và quảng cáo (mục 11).
 2. **Thu hồi tiền thất thoát: đối soát chênh lệch và hồ sơ khiếu nại có bằng chứng.** Bằng chứng: review hoàn/trả hàng mất hàng mất tiền (mục 4). Không hãng nào trong dữ liệu có đủ "khiếu nại kèm bằng chứng"; Sapo có đánh dấu "quá hạn thanh toán" nhưng phí sàn do người dùng tự nhập (31/03/2025), BigSeller có cảnh báo chênh lệch thanh toán, Renda có theo dõi tiền về ví.
 3. **Thao tác ảnh hưởng tiền có người duyệt và có nhật ký.** Bằng chứng yếu: hai review TikTok về nút hoàn tiền không có bước xác nhận. Cần phỏng vấn để xác thực.
@@ -396,6 +407,7 @@ Không hãng nào có ✓ ở cả ba cột. Đó là chỗ đứng của lát c
 **Build hay không:** có, nhưng như một sản phẩm hẹp, không phải toàn bộ PRD. Nếu mục tiêu là venture lớn thì thị trường này (SAM $0,13–13M) chưa đủ ở giá hiện tại; nếu là doanh nghiệp nhỏ–vừa hoặc công cụ cho chính mình thì hợp lý. Khoảng trống hẹp hơn lúc đầu vì Shopee đã có lãi từng đơn riêng cho Shopee (mục 1, 11).
 
 **Vào bằng đường nào:**
+
 1. **Lát cắt theo ba JTBD (mục 12):** lãi thật đa sàn có GMV Max, đối soát từng khoản chênh lệch kèm hồ sơ khiếu nại, và duyệt/audit cho thao tác ảnh hưởng tiền. Bỏ khỏi bản đầu: kho, in tem, đăng video, chat, livestream, tạo ảnh/video.
 2. **Cách nối dữ liệu:** bắt đầu bằng nhập file báo cáo thanh toán xuất từ Seller Center để chưa phải qua cổng ISV. Đây là suy luận của mình, chưa kiểm điều khoản và chưa kiểm định dạng file VN. Làm API sau, qua đường ủy quyền chính thức (Partner Center, TSP). Không dùng user phụ hay trình duyệt tự động.
 3. **Khách hàng:** shop ≥100 triệu/tháng bán cả hai sàn, cộng kế toán và agency vận hành shop làm kênh. Thông điệp: "tiền về thấp hơn giá bán vì sao".
@@ -404,6 +416,7 @@ Không hãng nào có ✓ ở cả ba cột. Đó là chỗ đứng của lát c
 6. **Wedge:** gói miễn phí 1 shop nhập báo cáo hai sàn, hiện lãi thật và đối soát từng khoản chênh lệch. Khác Renda Free (làm mới 1 lần/ngày, chỉ báo cáo mẫu) ở chỗ đối soát từng khoản, không chỉ hiển thị lãi.
 
 **Xác thực trước khi viết dòng code nào (rẻ nhất đến đắt nhất):**
+
 1. **Kiểm tra trên tài khoản seller VN thật** xem công cụ gốc làm được gì: Shopee "Quản lý Kế toán" và báo cáo Doanh thu; TikTok Shop VN đã có Earnings Analytics/Seller Assistant chưa. Nếu chúng đã giải quyết JTBD 1 và 2 cho từng sàn thì lát cắt chỉ còn giá trị ở phần đa sàn và quảng cáo.
 2. **Xin 3–5 sao kê đối soát thật** của seller (đã ẩn thông tin) để đo r, tỷ lệ thất thoát thu hồi được. Đây là biến lớn nhất không có nguồn nào.
 3. **Phỏng vấn 5 seller ≥100 triệu/tháng:** đang đối soát bằng gì, Excel hay tool nào, trả bao nhiêu, có muốn thấy phí affiliate theo từng đơn không, có dùng "Quản lý Kế toán" của Shopee không.
@@ -421,13 +434,13 @@ Không hãng nào có ✓ ở cả ba cột. Đó là chỗ đứng của lát c
 - Kỳ tính giá của Sapo, KiotViet, Renda không được trang ghi rõ; mình giả định theo tháng.
 - Số liệu thị trường 2026 (phí sàn, e-Conomy) mới trong vài tuần: kiểm lại trước khi trích.
 - **Bổ sung 2026-11-06:**
-  - Reddit trực tiếp bị CAPTCHA ở hai IP thoát; chỉ có bản lưu trữ Arctic Shift (hay báo "Too many requests") và PullPush (lỗi 526). Các lần trả rỗng không phải bằng chứng "không có thread".
-  - Google VN không đọc được (CAPTCHA), nên các nhận định về từ khoá chỉ là proxy từ WebSearch kết quả Mỹ.
-  - Meta Ad Library chỉ nạp một mẫu 50–59 quảng cáo mỗi truy vấn.
-  - Capterra: chỉ có tìm kiếm nội bộ mờ cho Sapo, KiotViet, Nhanh, Haravan, Ginee, BigSeller; "không thấy" chưa phải "không có". Nhanh.vn chưa tìm được trên G2.
-  - TrustMRR: không tìm thấy hồ sơ cho các hãng lớn; trang tìm kiếm chạy ở phía client.
-  - Giá vốn (mục 8) và CAC (mục 9) dùng giả định của mình, chưa có số đo từ hãng nào hay từ bản chạy thử.
-  - Không đọc được `open.shopee.com`, Điều khoản dịch vụ Shopee VN, danh mục TikTok Shop App & Service Store, và bản gốc chính sách giới hạn đăng nội dung của TikTok Shop.
+    - Reddit trực tiếp bị CAPTCHA ở hai IP thoát; chỉ có bản lưu trữ Arctic Shift (hay báo "Too many requests") và PullPush (lỗi 526). Các lần trả rỗng không phải bằng chứng "không có thread".
+    - Google VN không đọc được (CAPTCHA), nên các nhận định về từ khoá chỉ là proxy từ WebSearch kết quả Mỹ.
+    - Meta Ad Library chỉ nạp một mẫu 50–59 quảng cáo mỗi truy vấn.
+    - Capterra: chỉ có tìm kiếm nội bộ mờ cho Sapo, KiotViet, Nhanh, Haravan, Ginee, BigSeller; "không thấy" chưa phải "không có". Nhanh.vn chưa tìm được trên G2.
+    - TrustMRR: không tìm thấy hồ sơ cho các hãng lớn; trang tìm kiếm chạy ở phía client.
+    - Giá vốn (mục 8) và CAC (mục 9) dùng giả định của mình, chưa có số đo từ hãng nào hay từ bản chạy thử.
+    - Không đọc được `open.shopee.com`, Điều khoản dịch vụ Shopee VN, danh mục TikTok Shop App & Service Store, và bản gốc chính sách giới hạn đăng nội dung của TikTok Shop.
 
 ## Tự chấm theo checklist của skill
 
@@ -442,7 +455,7 @@ Không hãng nào có ✓ ở cả ba cột. Đó là chỗ đứng của lát c
 - [x] Sửa ít nhất một chỗ agent sai (mục 14).
 - [x] Đọc G2, Capterra, Reddit, Trustpilot, HN bằng `read-blocked` (mục 4). Reddit chỉ qua bản lưu trữ vì trực tiếp bị CAPTCHA.
 - Đề xuất sửa skill `market-research`:
-  - **Chuỗi bị hỏng trong SKILL.md:** "lỗ −mới.15M" (ví dụ MacPaw), "Bổ–$3k", "trục Y: điểm tính năng trên mỗi theo giá quy về một năm" (thiếu đơn vị), "(vận–theo/tháng)". Trông như hậu quả của một lần thay thế hàng loạt.
-  - **Tên công cụ không khớp môi trường:** skill ghi `search_web` và "subagent `self`"; môi trường này có `WebSearch` và agent `general-purpose`.
-  - **`positioning_chart.py` cố định trục Y tối thiểu 5 và đơn vị "$10/năm":** với thị trường có giá cao hơn thì điểm dồn sát đáy. Nên thêm tham số đơn vị giá.
-  - Chưa sửa file nào của skill.
+    - **Chuỗi bị hỏng trong SKILL.md:** "lỗ −mới.15M" (ví dụ MacPaw), "Bổ–$3k", "trục Y: điểm tính năng trên mỗi theo giá quy về một năm" (thiếu đơn vị), "(vận–theo/tháng)". Trông như hậu quả của một lần thay thế hàng loạt.
+    - **Tên công cụ không khớp môi trường:** skill ghi `search_web` và "subagent `self`"; môi trường này có `WebSearch` và agent `general-purpose`.
+    - **`positioning_chart.py` cố định trục Y tối thiểu 5 và đơn vị "$10/năm":** với thị trường có giá cao hơn thì điểm dồn sát đáy. Nên thêm tham số đơn vị giá.
+    - Chưa sửa file nào của skill.
