@@ -79,17 +79,22 @@
  ],
  "candidates": [
   {
-   "name": "MVP PRD @ $150/năm",
-   "functionality": 8.5,
+   "name": "Lát cắt đối soát+lãi thật (5,5) @ $150/năm",
+   "functionality": 5.5,
    "effective_per_year": 150.0
   },
   {
-   "name": "MVP PRD @ $300/năm",
+   "name": "Lát cắt đối soát+lãi thật (5,5) @ $300/năm",
+   "functionality": 5.5,
+   "effective_per_year": 300.0
+  },
+  {
+   "name": "PRD MVP đủ (8,5) @ $300/năm",
    "functionality": 8.5,
    "effective_per_year": 300.0
   },
   {
-   "name": "MVP + GĐ2 thực tế @ $300/năm",
+   "name": "MVP + GĐ2 thực tế (11,5) @ $300/năm",
    "functionality": 11.5,
    "effective_per_year": 300.0
   }
