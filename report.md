@@ -107,7 +107,11 @@ Khoảng trống theo độ mạnh bằng chứng:
 
 **Điều chưa biết:** 0/790 review 1–2★ của Sapo, KiotViet, Nhanh, Haravan nhắc "đối soát". Có thể tính năng ít người dùng, hoặc họ dùng web và không viết review app. Dữ liệu không tách được hai khả năng, nên **không kết luận được "chưa ai làm tốt đối soát"**.
 
-**Nguồn thiếu:** Facebook group (nguồn quan trọng nhất cho than phiền seller VN), Reddit, G2, Capterra, Voz, Tinhte đều không đọc được. Hacker News không có tín hiệu về thị trường này.
+**Nguồn thiếu và phần đã bổ sung (cập nhật 2026-11-06):**
+- **Reddit:** thử qua proxy ở hai IP thoát khác nhau (Malaysia, Canada), cả hai đều gặp trang CAPTCHA "Prove your humanity", không đọc được. Kho lưu trữ chỉ trả được bài không liên quan (về Shopify). Bài này không dùng số liệu Reddit nào.
+- **G2 và Capterra:** đã đọc được G2 (qua trình duyệt từ xa). Ginee có trang với 5/5 từ 3 review, hồ sơ chưa được claim. Tìm kiếm không ra trang riêng của BigSeller trên G2 hay Capterra (kết quả "BE BIG SELLER" là một công ty khác). Hai nguồn này gần như trống cho thị trường này, nên không bổ sung được nỗi đau seller.
+- **Facebook group** (nguồn quan trọng nhất cho than phiền seller VN, cần đăng nhập), **Voz, Tinhte:** vẫn chưa đọc.
+- Hacker News không có tín hiệu về thị trường này.
 
 ## 5. Khả thi kỹ thuật và pháp lý (theo từng module PRD)
 
@@ -245,7 +249,7 @@ SOM (12 tháng) = SAM × 2%
 ## 11. Giới hạn của bản research này
 
 - Không đọc được tài liệu gốc của Shopee Open Platform và TikTok Partner Center (SPA); mọi dòng API là đoạn trích tìm kiếm hoặc nguồn thứ cấp.
-- Không có Facebook group, Reddit, G2, Capterra, Voz, Tinhte. Không có dữ liệu Metric/YouNet trả phí (số shop theo dải doanh thu, mức chồng lấn Shopee ∩ TikTok).
+- Không có Facebook group, Voz, Tinhte; Reddit bị CAPTCHA; G2 và Capterra gần như trống cho thị trường này (xem mục 4). Không có dữ liệu Metric/YouNet trả phí (số shop theo dải doanh thu, mức chồng lấn Shopee ∩ TikTok).
 - Chưa dùng thử bất kỳ tool nào: mọi "✓" là từ trang hãng (vendor), chưa kiểm bằng sản phẩm thật.
 - Renda (đối thủ gần PRD nhất): chưa có hồ sơ công ty, chưa mở demo, chưa biết số khách.
 - "Không thấy" trong ma trận không đồng nghĩa với "hãng không có".
